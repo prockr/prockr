@@ -82,7 +82,7 @@ export default function PricingHubPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/moving/villa-moving-Riyadh.jpg"
+                  src="/images/moving/villa-moving-service.jpg"
                   alt="أسعار الخدمات المنزلية"
                   fill
                   className="object-cover"

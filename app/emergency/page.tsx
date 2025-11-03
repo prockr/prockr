@@ -87,7 +87,7 @@ export default function EmergencyHubPage() {
             <div className="order-1 lg:order-2">
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/leaks-plumbing/emergency-plumber-24-7.jpg"
+                  src="/images/leaks-plumbing/emergency-plumbing-Jeddah.jpg"
                   alt="خدمة طوارئ 24/7"
                   fill
                   className="object-cover"

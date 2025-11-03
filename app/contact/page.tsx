@@ -67,7 +67,7 @@ export default function ContactPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/pest-control/pest-control-services-Saudi-Arabia.jpg"
+                  src="/images/pest-control/pest-control-Saudi-Arabia.jpg"
                   alt="اتصل بنا"
                   fill
                   className="object-cover"

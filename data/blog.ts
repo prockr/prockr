@@ -1756,7 +1756,7 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ['توفير كهرباء', 'فاتورة الكهرباء', 'مكيفات', 'عزل حراري'],
     publishedAt: '2024-10-05',
     readingTime: 13,
-    image: '/images/electricity/energy-saving-solutions3..jpg',
+    image: '/images/electricity/smart-home-electrical-setup.jpg',
     featured: false,
     metaDescription: 'دليل شامل لتوفير 50% من فاتورة الكهرباء في صيف السعودية. 15 طريقة مجربة قد توفر عليك 15,000 ريال سنوياً!',
   },

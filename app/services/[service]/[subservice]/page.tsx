@@ -83,9 +83,9 @@ export default function SubserviceHubPage({ params }: PageProps) {
       'cleaning-deep-cleaning': '/images/cleaning/deep-cleaning-Jeddah.jpg',
       'cleaning-hourly-cleaning': '/images/cleaning/hourly-maid-service.jpg',
       'cleaning-tank-cleaning': '/images/cleaning/water-tank-cleaning-Saudi-Arabia.jpg',
-      'pest-control-general-spray': '/images/pest-control/pest-control-services-Saudi-Arabia.jpg',
-      'leaks-plumbing-thermal-leak-detection': '/images/leaks-plumbing/water-leak-detection.jpg',
-      'ac-split-ac-cleaning': '/images/ac/AC-cleaning-and-maintenance.jpg',
+      'pest-control-general-spray': '/images/pest-control/pest-control-Saudi-Arabia.jpg',
+      'leaks-plumbing-thermal-leak-detection': '/images/leaks-plumbing/water-leak-detection-Riyadh.jpg',
+      'ac-split-ac-cleaning': '/images/cleaning/AC-cleaning-and-maintenance.jpg',
     };
 
     const key = `${serviceSlug}-${subserviceSlug}`;

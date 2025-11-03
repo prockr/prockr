@@ -451,24 +451,49 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
     ],
   },
 
-  // Carpentry / النجارة (using moving images as placeholders since carpentry folder is empty)
+  // Carpentry / النجارة
   carpentry: {
     hero: [
-      '/images/moving/furniture-moving-company.jpg',
-      '/images/moving/dismantling-and-assembling-furniture.jpg',
+      '/images/carpentry/Carpentry services.jpg',
+      '/images/carpentry/Custom furniture.jpg',
+      '/images/carpentry/Home carpentry.jpg',
+      '/images/carpentry/Saudi carpenters.jpg',
+    ],
+    gallery: [
+      '/images/carpentry/Kitchen cabinets.jpg',
+      '/images/carpentry/Door installation.jpg',
+      '/images/carpentry/Wardrobe design.jpg',
+      '/images/carpentry/Furniture repair.jpg',
+      '/images/carpentry/Wooden flooring.jpg',
+      '/images/carpentry/Woodworking Saudi Arabia.jpg',
     ],
   },
   'kitchen-cabinets': {
-    hero: ['/images/moving/furniture-moving-company.jpg'],
+    hero: [
+      '/images/carpentry/Kitchen cabinets.jpg',
+      '/images/carpentry/Custom furniture.jpg',
+      '/images/carpentry/Carpentry services.jpg',
+    ],
   },
   'doors-windows': {
-    hero: ['/images/moving/dismantling-and-assembling-furniture.jpg'],
+    hero: [
+      '/images/carpentry/Door installation.jpg',
+      '/images/carpentry/Home carpentry.jpg',
+    ],
   },
   bedrooms: {
-    hero: ['/images/moving/furniture-moving-company.jpg'],
+    hero: [
+      '/images/carpentry/Wardrobe design.jpg',
+      '/images/carpentry/Custom furniture.jpg',
+      '/images/carpentry/Furniture repair.jpg',
+    ],
   },
   'furniture-repair': {
-    hero: ['/images/moving/dismantling-and-assembling-furniture.jpg'],
+    hero: [
+      '/images/carpentry/Furniture repair.jpg',
+      '/images/carpentry/Carpentry services.jpg',
+      '/images/carpentry/Woodworking Saudi Arabia.jpg',
+    ],
   },
 
   // Aluminum & Glass / الألمنيوم والزجاج

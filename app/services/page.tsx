@@ -124,7 +124,7 @@ export default function ServicesPage() {
 
               <div className="relative h-[200px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/leaks-plumbing/water-leak-detection.jpg"
+                  src="/images/leaks-plumbing/water-leak-detection-Riyadh.jpg"
                   alt="كشف تسربات"
                   fill
                   className="object-cover"
