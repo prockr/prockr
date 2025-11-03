@@ -81,23 +81,15 @@ export function Header() {
         <nav className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform group-hover:scale-110">
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="relative w-16 h-16 md:w-20 md:h-20 transition-all duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
-                  alt="بروكر - خدمات منزلية"
+                  alt="Prockr - خدمات منزلية السعودية"
                   fill
-                  className="object-contain"
+                  className="object-contain drop-shadow-lg"
                   priority
                 />
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-2xl md:text-3xl font-bold text-primary-600 leading-tight">
-                  بروكر
-                </div>
-                <div className="text-xs text-gray-600 font-medium">
-                  خدمات منزلية احترافية
-                </div>
               </div>
             </Link>
 
