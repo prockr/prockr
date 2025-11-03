@@ -26,12 +26,12 @@ const slides: Slide[] = [
     subtitle: 'فنيون خبراء • قطع أصلية • ضمان معتمد',
   },
   {
-    image: '/images/leaks-plumbing/water-leak-detection.jpg',
+    image: '/images/leaks-plumbing/water-leak-detection-Riyadh.jpg',
     title: 'كشف تسربات المياه',
     subtitle: 'أحدث الأجهزة • دقة عالية • حلول فورية',
   },
   {
-    image: '/images/pest-control/pest-control-services-Saudi-Arabia.jpg',
+    image: '/images/pest-control/pest-control-Saudi-Arabia.jpg',
     title: 'مكافحة حشرات',
     subtitle: 'مواد آمنة • فعالية طويلة • صحة عائلتك',
   },

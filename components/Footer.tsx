@@ -15,13 +15,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <Link href="/" className="inline-block mb-4 group">
-              <div className="relative w-32 h-32 transition-transform duration-300 group-hover:scale-105">
+            <Link href="/" className="inline-block mb-6 group">
+              <div className="relative w-40 h-40 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
                   alt="Prockr - خدمات منزلية السعودية"
                   fill
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain drop-shadow-2xl brightness-110"
                 />
               </div>
             </Link>
