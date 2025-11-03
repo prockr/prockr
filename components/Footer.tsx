@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { PHONE, WHATSAPP } from '@/lib/constants';
 import { SERVICES } from '@/data/services';
 import { getTier1Cities } from '@/data/cities';
@@ -14,7 +15,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">بروكر</h3>
+            <Link href="/" className="inline-block mb-4 group">
+              <div className="relative w-32 h-32 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/images/Logo.png"
+                  alt="Prockr - خدمات منزلية السعودية"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </Link>
             <p className="text-gray-400 mb-4 leading-relaxed">
               منصة رائدة لربطك بأفضل مقدمي الخدمات المنزلية المعتمدين في جميع أنحاء
               المملكة العربية السعودية

@@ -82,12 +82,12 @@ export function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-16 h-16 md:w-20 md:h-20 transition-all duration-300 group-hover:scale-105">
+              <div className="relative w-20 h-20 md:w-24 md:h-24 transition-all duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
                   alt="Prockr - خدمات منزلية السعودية"
                   fill
-                  className="object-contain drop-shadow-lg"
+                  className="object-contain drop-shadow-2xl"
                   priority
                 />
               </div>
