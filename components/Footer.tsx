@@ -16,7 +16,7 @@ export function Footer() {
           {/* About */}
           <div>
             <Link href="/" className="inline-block mb-6 group">
-              <div className="relative w-80 h-80 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative w-48 h-48 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
                   alt="Prockr - خدمات منزلية السعودية"
