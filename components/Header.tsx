@@ -79,10 +79,10 @@ export function Header() {
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-200">
         <nav className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20 md:h-24">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-28 h-28 md:w-32 md:h-32 transition-all duration-300 group-hover:scale-105">
+              <div className="relative w-20 h-20 md:w-24 md:h-24 transition-all duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
                   alt="Prockr - خدمات منزلية السعودية"
