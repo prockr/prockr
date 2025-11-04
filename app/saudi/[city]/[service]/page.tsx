@@ -162,6 +162,8 @@ export default function ServiceCityPage({ params }: PageProps) {
                   fill
                   className="object-cover"
                   priority
+                  quality={90}
+                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

@@ -22,6 +22,8 @@ export function Footer() {
                   alt="Prockr - خدمات منزلية السعودية"
                   fill
                   className="object-contain drop-shadow-2xl brightness-110"
+                  quality={95}
+                  loading="lazy"
                 />
               </div>
             </Link>

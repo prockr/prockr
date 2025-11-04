@@ -180,6 +180,8 @@ export default function ServiceHubPage({ params }: PageProps) {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority={idx === 0}
+                    quality={idx === 0 ? 90 : 85}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>

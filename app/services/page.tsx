@@ -87,6 +87,8 @@ export default function ServicesPage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={85}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -101,6 +103,8 @@ export default function ServicesPage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={85}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -115,6 +119,8 @@ export default function ServicesPage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={85}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -129,6 +135,8 @@ export default function ServicesPage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 25vw"
+                  quality={85}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">

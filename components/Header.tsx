@@ -89,6 +89,7 @@ export function Header() {
                   fill
                   className="object-contain drop-shadow-2xl"
                   priority
+                  quality={95}
                 />
               </div>
             </Link>
