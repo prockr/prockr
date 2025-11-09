@@ -16,13 +16,14 @@ export function Footer() {
           {/* About */}
           <div>
             <Link href="/" className="inline-block mb-6 group">
-              <div className="relative w-48 h-48 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative w-40 h-40 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/images/Logo.png"
                   alt="Prockr - خدمات منزلية السعودية"
-                  fill
+                  width={160}
+                  height={160}
                   className="object-contain drop-shadow-2xl brightness-110"
-                  quality={95}
+                  quality={100}
                   loading="lazy"
                 />
               </div>
