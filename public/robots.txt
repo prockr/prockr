@@ -1,0 +1,59 @@
+# robots.txt - Optimized for AI Search Engines
+# بروكر - Prokr - خدمات منزلية في السعودية
+
+# AI Search Engine Crawlers
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# General AI Bots
+User-agent: CCBot
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Default for all robots
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://prokr.com/sitemap.xml
+Sitemap: https://prokr.com/sitemaps/index
+
+# Crawl Rules
+Crawl-delay: 1
+
+# Host
+Host: https://prokr.com
+

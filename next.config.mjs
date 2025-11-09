@@ -24,7 +24,7 @@ const nextConfig = {
       dynamic: 86400, // 1 day
     },
   },
-  // Headers for caching
+  // Headers for caching and AI optimization
   async headers() {
     return [
       {
@@ -33,6 +33,45 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+          },
+          {
+            key: 'X-AI-Index',
+            value: 'allow',
+          },
+        ],
+      },
+      {
+        source: '/ai-metadata',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=86400',
+          },
+        ],
+      },
+      {
+        source: '/.well-known/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
           },
         ],
       },

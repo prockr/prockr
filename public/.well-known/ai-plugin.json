@@ -1,0 +1,50 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "بروكر - Prokr",
+  "name_for_model": "prokr_home_services",
+  "description_for_human": "المنصة الرائدة للخدمات المنزلية في المملكة العربية السعودية - نقل عفش، تنظيف، مكافحة حشرات، وأكثر",
+  "description_for_model": "Prokr is the leading home services platform in Saudi Arabia. It provides professional services including furniture moving, cleaning, pest control, leak detection, AC maintenance, and more across 45+ cities in Saudi Arabia. Available 24/7 with certified professionals and written warranties.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://prokr.com/api/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://prokr.com/images/Logo.png",
+  "contact_email": "info@prokr.com",
+  "legal_info_url": "https://prokr.com/terms",
+  "capabilities": {
+    "services": [
+      "furniture_moving",
+      "house_cleaning",
+      "pest_control",
+      "leak_detection",
+      "ac_maintenance",
+      "plumbing",
+      "insulation",
+      "painting",
+      "electrical",
+      "carpentry"
+    ],
+    "cities": [
+      "Riyadh",
+      "Jeddah",
+      "Dammam",
+      "Makkah",
+      "Madinah"
+    ],
+    "coverage": "45+ cities in Saudi Arabia",
+    "availability": "24/7",
+    "language": "Arabic",
+    "features": [
+      "certified_professionals",
+      "written_warranty",
+      "competitive_pricing",
+      "fast_response",
+      "quality_guarantee"
+    ]
+  }
+}
+
