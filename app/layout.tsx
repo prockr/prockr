@@ -24,8 +24,8 @@ export default function RootLayout({
   const schemas = [generateLocalBusinessSchema()];
 
   return (
-    <html lang="ar" dir="rtl" className={tajawal.variable}>
-      <body>
+    <html lang="ar" dir="rtl" className={tajawal.variable} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <SchemaInjector schemas={schemas} />
         <Header />
         <main className="min-h-screen">{children}</main>

@@ -71,7 +71,7 @@ export function HeroSlider() {
       {/* Images */}
       {slides.map((slide, index) => (
         <div
-          key={index}
+          key={`slide-${slide.title}-${index}`}
           className={`absolute inset-0 transition-all duration-700 ${
             index === currentSlide
               ? 'opacity-100 scale-100'

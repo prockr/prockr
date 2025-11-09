@@ -11,7 +11,7 @@ export function Gallery({ images }: GalleryProps) {
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {images.map((image, index) => (
         <div
-          key={index}
+          key={`${image.src}-${index}`}
           className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 shadow-sm hover:shadow-md transition-shadow"
         >
           <Image
