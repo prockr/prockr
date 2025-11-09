@@ -179,6 +179,280 @@ export default function ServiceCityPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Detailed Introduction */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+              خدمة {service.name_ar} الاحترافية في {city.name_ar}
+            </h2>
+            
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+              <p className="text-xl">
+                تشتهر <span className="font-bold text-primary-600">{city.name_ar}</span> بكونها واحدة من أهم المدن في المملكة العربية السعودية، ولذلك فإن الحصول على خدمات منزلية احترافية أمر بالغ الأهمية. في <span className="font-bold text-primary-600">بروكر</span>، نفخر بتقديم أفضل خدمات {service.name_ar} في {city.name_ar} مع فريق محلي متخصص يفهم احتياجات سكان المدينة.
+              </p>
+
+              <p className="text-xl">
+                سواء كنت تبحث عن {service.name_ar} لمنزلك، مكتبك، أو منشأتك التجارية في {city.name_ar}، فإن فريقنا جاهز لخدمتك على مدار الساعة. نحن نعمل مع أفضل المتخصصين المحليين والمعتمدين، ونضمن لك جودة الخدمة وسرعة الاستجابة.
+              </p>
+
+              <p className="text-xl">
+                ما يميزنا في {city.name_ar} هو معرفتنا العميقة بطبيعة المدينة ومناخها وخصوصية احتياجات سكانها. كل خدمة نقدمها مصممة خصيصاً لتناسب ظروف {city.name_ar} ومتطلباتها الفريدة. فريقنا المحلي متواجد في جميع أحياء {city.name_ar} لضمان سرعة الوصول إليك.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us in This City */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              لماذا نحن الخيار الأول لـ{service.name_ar} في {city.name_ar}؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              مزايا لن تجدها في أي مكان آخر
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  🏆
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">فريق محلي متخصص</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  فريقنا في {city.name_ar} يتكون من أفضل المتخصصين المحليين الذين يعرفون المدينة جيداً ويفهمون احتياجاتها الخاصة. نحن نعيش هنا ونعمل هنا ونفخر بخدمة مجتمعنا.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  ⚡
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">استجابة فورية</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  بفضل تواجدنا القوي في جميع أحياء {city.name_ar}، نستطيع الوصول إليك في أسرع وقت ممكن. نحن نعد بالاستجابة خلال ساعات قليلة، وفي حالات الطوارئ نصل خلال دقائق.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  💰
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">أسعار خاصة لأهل {city.name_ar}</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  نقدم باقات وعروض خاصة لسكان {city.name_ar}، مع أسعار تنافسية ومرونة في الدفع. لا توجد رسوم خفية، وكل شيء واضح ومكتوب.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  🛡️
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">ضمان شامل</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  نقدم ضماناً مكتوباً على جميع خدماتنا في {city.name_ar}. إذا لم تكن راضياً تماماً، نعود ونصلح أي مشكلة دون أي تكلفة إضافية.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  🔧
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">معدات متطورة</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  نستخدم أحدث المعدات والتقنيات في تقديم خدمات {service.name_ar}. جميع أدواتنا معتمدة ويتم صيانتها بانتظام لضمان أفضل النتائج.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">
+                  📞
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">دعم مستمر</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  فريق خدمة العملاء متاح 24/7 للرد على استفساراتك وحل أي مشكلة قد تواجهك. نحن دائماً على بعد مكالمة هاتفية أو رسالة واحدة.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work in City */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              كيف نعمل في {city.name_ar}؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              عملية بسيطة وسريعة من البداية حتى النهاية
+            </p>
+
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-200 via-primary-400 to-primary-600 transform -translate-x-1/2"></div>
+
+              {/* Step 1 */}
+              <div className="relative mb-12 lg:mb-16">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                  <div className="lg:text-left text-center mb-6 lg:mb-0">
+                    <div className="inline-block lg:ml-auto">
+                      <div className="bg-primary-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto lg:mx-0">
+                        1
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">اتصل أو احجز أونلاين</h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        اتصل بنا على الرقم الموحد أو احجز عبر الموقع أو تطبيق واتساب. فريقنا في {city.name_ar} متاح على مدار الساعة لاستقبال طلبك وتحديد موعد مناسب لك.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block"></div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative mb-12 lg:mb-16">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                  <div className="hidden lg:block"></div>
+                  <div className="lg:text-right text-center mb-6 lg:mb-0">
+                    <div className="inline-block lg:mr-auto">
+                      <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto lg:mx-0">
+                        2
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">زيارة الفريق المتخصص</h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        يصل فريقنا المتخصص إلى موقعك في {city.name_ar} في الوقت المحدد. نقوم بمعاينة شاملة وتقييم دقيق للعمل المطلوب، ونقدم لك عرض سعر واضح ومفصل.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative mb-12 lg:mb-16">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                  <div className="lg:text-left text-center mb-6 lg:mb-0">
+                    <div className="inline-block lg:ml-auto">
+                      <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto lg:mx-0">
+                        3
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">تنفيذ الخدمة بمهنية</h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        بعد موافقتك، نبدأ العمل فوراً باستخدام أفضل المعدات والمواد. نلتزم بأعلى معايير الجودة والسلامة، ونحافظ على نظافة مكان العمل طوال فترة التنفيذ.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block"></div>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="relative">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                  <div className="hidden lg:block"></div>
+                  <div className="lg:text-right text-center">
+                    <div className="inline-block lg:mr-auto">
+                      <div className="bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 mx-auto lg:mx-0">
+                        4
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">التسليم والمتابعة</h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        بعد إنهاء العمل، نقوم بمراجعة شاملة معك للتأكد من رضاك التام. نسلمك شهادة ضمان مكتوبة ونبقى على تواصل معك للمتابعة وتقديم الدعم المستمر.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* City Specific Tips */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-primary-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              نصائح خاصة بـ{service.name_ar} في {city.name_ar}
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              إرشادات من خبرائنا المحليين
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-2xl">
+                    🌡️
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">توقيت الخدمة المناسب</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      في {city.name_ar}، نوصي بتنسيق خدمات {service.name_ar} مع الأخذ بعين الاعتبار طبيعة مناخ المدينة والأوقات المناسبة للعمل. فريقنا سيرشدك لاختيار أفضل توقيت لضمان نتائج مثالية ومستدامة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+                    🏠
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">خصوصية المنازل في {city.name_ar}</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      نحن نفهم طبيعة المباني والمنازل في {city.name_ar}. سواء كانت فيلا، شقة، أو منشأة تجارية، لدينا الخبرة والمعرفة اللازمة للتعامل مع كل نوع بشكل احترافي وفعال.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+                    ⏰
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">الصيانة الدورية</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      بسبب الظروف المناخية الخاصة في {city.name_ar}، نوصي بشدة بإجراء صيانة دورية لـ{service.name_ar}. نقدم برامج صيانة سنوية بأسعار تفضيلية لسكان المدينة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-2xl">
+                    📍
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">تغطية شاملة للأحياء</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      نغطي جميع أحياء {city.name_ar} دون استثناء. بغض النظر عن موقعك في المدينة، فريقنا يصل إليك بسرعة ويقدم نفس مستوى الخدمة الممتاز.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-white rounded-xl shadow-lg p-8 border-r-4 border-primary-600">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <span className="text-3xl">💡</span>
+                نصيحة خاصة لأهل {city.name_ar}
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                استفد من العروض الخاصة التي نقدمها لسكان {city.name_ar}. اشترك في برنامج الولاء الخاص بنا واحصل على خصومات دائمة على جميع خدمات {service.name_ar} والخدمات الأخرى. كلما استخدمت خدماتنا أكثر، كلما حصلت على مزايا أكبر!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Value Props */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">

@@ -216,6 +216,228 @@ export default function SubserviceHubPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Service Introduction */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+              {subservice.name_ar} - خدمة متخصصة احترافية
+            </h2>
+            
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+              <p className="text-xl">
+                تُعتبر خدمة <span className="font-bold text-primary-600">{subservice.name_ar}</span> من أكثر الخدمات المتخصصة التي نفخر بتقديمها في <span className="font-bold text-primary-600">بروكر</span>. نحن ندرك أن كل تفصيل مهم عندما يتعلق الأمر بـ{subservice.name_ar}، ولذلك نوفر فريقاً متخصصاً حصرياً لهذه الخدمة بالذات.
+              </p>
+
+              <p className="text-xl">
+                مع سنوات من الخبرة في تقديم خدمات {subservice.name_ar} عبر أكثر من 45 مدينة سعودية، طورنا منهجية عمل متقدمة تضمن أفضل النتائج. فريقنا المتخصص يخضع لتدريب مستمر ويستخدم أحدث التقنيات والمعدات المتاحة في هذا المجال.
+              </p>
+
+              <p className="text-xl">
+                سواء كنت في الرياض، جدة، الدمام، أو أي مدينة أخرى في المملكة، يمكنك الاعتماد علينا لتنفيذ {subservice.name_ar} بأعلى معايير الجودة والاحترافية. نحن نفهم احتياجاتك ونسعى دائماً لتجاوز توقعاتك.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Service */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              لماذا قد تحتاج خدمة {subservice.name_ar}؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              فوائد ومزايا لا تُعد ولا تُحصى
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">توفير الوقت والجهد</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      خدمة {subservice.name_ar} الاحترافية توفر عليك الوقت والجهد الكبير. فريقنا المتخصص ينجز العمل بكفاءة عالية وفي وقت قياسي، مما يتيح لك التركيز على أمورك الأخرى الهامة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">نتائج مضمونة</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      عندما تختار متخصصين محترفين لـ{subservice.name_ar}، أنت تضمن الحصول على نتائج ممتازة ومستدامة. نحن نقدم ضماناً مكتوباً على جميع أعمالنا، مما يمنحك راحة البال الكاملة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">توفير المال</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      رغم أن الخدمة الاحترافية قد تبدو أكثر تكلفة في البداية، إلا أنها توفر عليك المال على المدى البعيد. العمل الجيد من المرة الأولى يمنع المشاكل المستقبلية والتكاليف الإضافية.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">الأمان والسلامة</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      {subservice.name_ar} تتطلب خبرة ومعرفة متخصصة لضمان الأمان والسلامة. فريقنا مدرب على أعلى معايير السلامة ومجهز بكافة معدات الوقاية اللازمة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+              كيف نقدم خدمة {subservice.name_ar}؟
+            </h2>
+
+            <div className="space-y-8">
+              <div className="flex items-start gap-6 p-6 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                  1
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">الاستشارة الأولية</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    نبدأ بالاستماع إلى احتياجاتك ومتطلباتك الخاصة. فريقنا يطرح الأسئلة المناسبة لفهم الوضع بشكل كامل وتقديم أفضل الحلول. هذه المرحلة مجانية بالكامل ودون أي التزام.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 p-6 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                  2
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">المعاينة والتقييم المهني</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    إذا لزم الأمر، نرسل متخصصاً لمعاينة الموقع وإجراء تقييم دقيق. نستخدم أدوات قياس متقدمة لضمان الحصول على تقدير صحيح. بعدها نقدم لك عرض سعر مفصل وواضح يشمل كل التفاصيل.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 p-6 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                  3
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">التنفيذ الاحترافي</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    فريقنا المتخصص يبدأ العمل وفقاً للخطة المتفق عليها. نستخدم أفضل المعدات والمواد، ونلتزم بأعلى معايير الجودة والسلامة. نحرص على إبقائك على اطلاع بتقدم العمل في كل مرحلة.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 p-6 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0 w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                  4
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">المراجعة النهائية والضمان</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    بعد إتمام {subservice.name_ar}، نجري مراجعة شاملة معك للتأكد من رضاك التام. نسلمك شهادة ضمان مكتوبة ونوضح لك كيفية الحفاظ على النتائج. فريق الدعم متاح دائماً لأي استفسارات مستقبلية.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-primary-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              نصائح مهمة حول {subservice.name_ar}
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              إرشادات من خبرائنا لضمان أفضل النتائج
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                  💡
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">الوقت الأمثل</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  اختر الوقت المناسب لـ{subservice.name_ar}. بعض الخدمات تكون أفضل في أوقات معينة من السنة أو اليوم. استشر فريقنا لتحديد الوقت الأمثل لحالتك.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                  ⏰
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">الصيانة الدورية</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  {subservice.name_ar} ليست حدثاً يحصل مرة واحدة فقط. الصيانة الدورية تضمن استمرار النتائج الممتازة لفترة أطول وتمنع المشاكل المستقبلية.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                  🎯
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">اختر المتخصصين</h3>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  لا تتنازل عن الجودة. اختيار متخصصين محترفين في {subservice.name_ar} يضمن لك نتائج ممتازة وتوفير المال على المدى البعيد.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-white rounded-xl shadow-lg p-8 border-r-4 border-primary-600">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <span className="text-3xl">⚠️</span>
+                تحذير مهم
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                تجنب التعامل مع مقدمي خدمات غير مرخصين أو غير معتمدين. {subservice.name_ar} تتطلب خبرة ومعدات متخصصة، والعمل غير المحترف قد يؤدي إلى مشاكل أكبر وتكاليف إضافية. تأكد دائماً من اختيار شركة موثوقة مثل بروكر التي توفر ضماناً مكتوباً وفريقاً معتمداً.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quick City Access */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
