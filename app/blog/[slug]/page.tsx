@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { getPostBySlug, getRelatedPosts, getAllPosts } from '@/data/blog';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { SchemaInjector } from '@/components/SchemaInjector';
+import { MarkdownContent } from '@/components/MarkdownContent';
 import { SITE_NAME_AR, SITE_URL, REVALIDATE_DEFAULT } from '@/lib/constants';
 import { absoluteUrl } from '@/lib/urls';
 import type { Metadata } from 'next';
@@ -204,31 +205,9 @@ export default function BlogPostPage({ params }: PageProps) {
             </div>
 
             {/* Article Content */}
-            <div className="prose prose-lg prose-gray max-w-none mb-12" 
-                 style={{ direction: 'rtl' }}
-                 dangerouslySetInnerHTML={{ __html: post.content.split('\n').map(line => {
-                   // Convert markdown-style headers
-                   if (line.startsWith('## ')) {
-                     return `<h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">${line.replace('## ', '')}</h2>`;
-                   }
-                   if (line.startsWith('### ')) {
-                     return `<h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${line.replace('### ', '')}</h3>`;
-                   }
-                   if (line.startsWith('#### ')) {
-                     return `<h4 class="text-xl font-bold text-gray-900 mt-6 mb-3">${line.replace('#### ', '')}</h4>`;
-                   }
-                   // Bold text
-                   line = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>');
-                   // Lists
-                   if (line.startsWith('- ')) {
-                     return `<li class="mb-2">${line.replace('- ', '')}</li>`;
-                   }
-                   // Regular paragraphs
-                   if (line.trim() && !line.includes('<')) {
-                     return `<p class="mb-4 leading-relaxed">${line}</p>`;
-                   }
-                   return line;
-                 }).join('') }}
+            <MarkdownContent 
+              content={post.content}
+              className="mb-12"
             />
 
             {/* Tags */}
