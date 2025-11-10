@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `أسئلة شائعة عن ${service.name_ar} في ${city.name_ar} | بروكر`,
     description: `إجابات على الأسئلة الأكثر شيوعاً حول خدمة ${service.name_ar} في ${city.name_ar}. كل ما تحتاج معرفته قبل طلب الخدمة.`,
+    alternates: {
+      canonical: `https://prokr.com/faq/${params.service}/${params.city}`,
+    },
     openGraph: {
       title: `أسئلة شائعة عن ${service.name_ar} في ${city.name_ar}`,
       description: `إجابات شاملة على أسئلتك حول ${service.name_ar}`,

@@ -32,6 +32,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${subservice.name_ar} - ${service.name_ar} | في جميع مدن السعودية | بروكر`,
     description: `احصل على خدمة ${subservice.name_ar} المتخصصة في جميع أنحاء المملكة. فريق محترف معتمد وأسعار تنافسية. اختر مدينتك واحجز الآن.`,
+    alternates: {
+      canonical: `https://prokr.com/services/${params.service}/${params.subservice}`,
+    },
     openGraph: {
       title: `${subservice.name_ar} في السعودية`,
       description: `خدمة ${subservice.name_ar} احترافية في جميع مدن المملكة`,

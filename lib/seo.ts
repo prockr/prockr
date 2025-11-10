@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { City } from '@/data/cities';
 import type { ServiceCategory } from '@/data/services';
-import { SITE_URL, SITE_NAME_AR, DEFAULT_TITLE_AR, DEFAULT_DESCRIPTION_AR } from './constants';
+import { SITE_NAME_AR, DEFAULT_TITLE_AR, DEFAULT_DESCRIPTION_AR } from './constants';
 import { absoluteUrl } from './urls';
 
 export function titleServiceCity(service: ServiceCategory, city: City): string {
@@ -25,19 +25,21 @@ export function generateMetadata({
   image?: string;
   noindex?: boolean;
 }): Metadata {
-  const canonical = path ? absoluteUrl(path) : SITE_URL;
+  const canonical = path ? absoluteUrl(path) : undefined;
   const ogImage = image ? absoluteUrl(image) : absoluteUrl('/images/Logo.png');
 
   const metadata: Metadata = {
     title: title || DEFAULT_TITLE_AR,
     description: description || DEFAULT_DESCRIPTION_AR,
-    alternates: {
-      canonical,
-      languages: {
-        ar: canonical,
-        'x-default': canonical,
+    ...(canonical && {
+      alternates: {
+        canonical,
+        languages: {
+          ar: canonical,
+          'x-default': canonical,
+        },
       },
-    },
+    }),
     openGraph: {
       title: title || DEFAULT_TITLE_AR,
       description: description || DEFAULT_DESCRIPTION_AR,

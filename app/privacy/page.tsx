@@ -5,6 +5,9 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'سياسة الخصوصية | بروكر',
   description: 'سياسة الخصوصية وحماية البيانات الشخصية في منصة بروكر للخدمات المنزلية',
+  alternates: {
+    canonical: 'https://prokr.com/privacy',
+  },
 };
 
 export default function PrivacyPage() {

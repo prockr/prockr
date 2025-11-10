@@ -40,6 +40,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `خدمة ${service.name_ar} في ${city.name_ar} | بروكر`,
     description: `احصل على أفضل خدمة ${service.name_ar} في ${city.name_ar}. فريق معتمد وضمان مكتوب وأسعار تنافسية.`,
+    alternates: {
+      canonical: `https://prokr.com/saudi/${params.city}/${params.service}`,
+    },
     openGraph: {
       title: `خدمة ${service.name_ar} في ${city.name_ar}`,
       description: `أفضل ${service.name_ar} في ${city.name_ar}`,

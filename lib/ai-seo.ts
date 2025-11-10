@@ -85,11 +85,6 @@ export function generateAIMetadata(params: AIMetadataParams): Metadata {
         'max-snippet': -1,
       },
     },
-    alternates: {
-      canonical: location && service
-        ? `https://prokr.com/saudi/${location}/${service}`
-        : undefined,
-    },
   };
 }
 

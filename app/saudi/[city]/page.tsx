@@ -29,6 +29,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `خدمات منزلية في ${city.name_ar} | جميع الخدمات | بروكر`,
     description: `احصل على أفضل الخدمات المنزلية في ${city.name_ar}. نقل عفش، تنظيف، سباكة، مكافحة حشرات، تكييف، كهرباء والمزيد. فريق معتمد وضمان مكتوب.`,
+    alternates: {
+      canonical: `https://prokr.com/saudi/${params.city}`,
+    },
     openGraph: {
       title: `خدمات منزلية في ${city.name_ar} | بروكر`,
       description: `أفضل الخدمات المنزلية في ${city.name_ar} بأسعار تنافسية وضمان مكتوب`,

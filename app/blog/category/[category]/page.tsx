@@ -26,6 +26,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `${category.name} - مدونة بروكر`,
     description: category.description,
+    alternates: {
+      canonical: `https://prokr.com/blog/category/${params.category}`,
+    },
   };
 }
 

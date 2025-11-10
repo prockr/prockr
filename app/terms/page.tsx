@@ -5,6 +5,9 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 export const metadata: Metadata = {
   title: 'الشروط والأحكام | بروكر',
   description: 'الشروط والأحكام الخاصة باستخدام منصة بروكر للخدمات المنزلية في المملكة العربية السعودية',
+  alternates: {
+    canonical: 'https://prokr.com/terms',
+  },
 };
 
 export default function TermsPage() {
