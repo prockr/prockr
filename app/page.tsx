@@ -6,8 +6,15 @@ import { TrustBadges } from '@/components/TrustBadges';
 import { HeroSlider } from '@/components/HeroSlider';
 import { cityPath } from '@/lib/urls';
 import { REVALIDATE_HOMEPAGE } from '@/lib/constants';
+import { generateMetadata as genMetadata } from '@/lib/seo';
 
 export const revalidate = REVALIDATE_HOMEPAGE;
+
+export const metadata = genMetadata({
+  title: 'بروكر - منصة الخدمات المنزلية الأولى في السعودية',
+  description: 'احصل على أفضل الخدمات المنزلية في السعودية. نقل عفش، تنظيف، سباكة، مكافحة حشرات، تكييف وأكثر. فريق معتمد متاح 24/7 في +45 مدينة.',
+  path: '/',
+});
 
 export default function HomePage() {
   const tier1Cities = getTier1Cities();

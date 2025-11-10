@@ -31,6 +31,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `عروض ${service.name_ar} في ${city.name_ar} | خصم حتى 30% | بروكر`,
     description: `عروض وخصومات استثنائية على خدمة ${service.name_ar} في ${city.name_ar}. وفّر حتى 30% على الخدمات المنزلية الاحترافية.`,
+    alternates: {
+      canonical: `https://prokr.com/deals/${params.service}/${params.city}`,
+    },
     openGraph: {
       title: `عروض ${service.name_ar} في ${city.name_ar} - خصم 30%`,
       description: `عروض محدودة على ${service.name_ar} في ${city.name_ar}`,
