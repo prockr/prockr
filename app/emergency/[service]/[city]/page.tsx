@@ -129,11 +129,8 @@ export default function EmergencyPage({
         <div className="bg-red-600 text-white rounded-lg p-8 mb-12 text-center">
           <div className="text-6xl mb-4">🚨</div>
           <h1 className="text-4xl font-bold mb-4">
-            خدمة طوارئ {service.name_ar} - 24 ساعة
+            خدمة طوارئ {service.name_ar} 24 ساعة في {city.name_ar}
           </h1>
-          <p className="text-2xl text-red-100 mb-6">
-            في {city.name_ar}
-          </p>
           <p className="text-xl mb-8">
             نصلك في أقل من 30 دقيقة
           </p>
