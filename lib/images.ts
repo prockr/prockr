@@ -277,7 +277,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
     gallery: [
       '/images/ac/Split-AC-installation.jpg',
       '/images/ac/Central-AC-service.jpg',
-      '/images/ac/AC-cleaning-and-maintenance.jpg',
+      '/images/cleaning/AC-cleaning-and-maintenance.jpg',
       '/images/ac/AC-duct-cleaning.jpg',
       '/images/ac/AC-gas-refilling.jpg',
       '/images/ac/AC-troubleshooting.jpg',
@@ -286,7 +286,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
   'split-ac-cleaning': {
     hero: [
       '/images/ac/Air-conditioning-cleaning.jpg',
-      '/images/ac/AC-cleaning-and-maintenance.jpg',
+      '/images/cleaning/AC-cleaning-and-maintenance.jpg',
     ],
   },
   'duct-cleaning': {
@@ -499,18 +499,37 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
   // Aluminum & Glass / الألمنيوم والزجاج
   'aluminum-glass': {
     hero: [
-      '/images/cleaning/glass-and-window-cleaning.jpg',
-      '/images/painting-gypsum/3D-wall-panels-KSA.jpg',
+      '/images/aluminum-glass/Aluminum Windows.jpg',
+      '/images/aluminum-glass/Glass Installation Services.jpg',
+      '/images/aluminum-glass/Sliding Glass Doors.jpg',
+      '/images/aluminum-glass/Frameless Glass Systems.jpg',
+    ],
+    gallery: [
+      '/images/aluminum-glass/Aluminum Fabrication.jpg',
+      '/images/aluminum-glass/Glass Partition Installation.jpg',
+      '/images/aluminum-glass/Aluminum Cladding.jpg',
+      '/images/aluminum-glass/Aluminum Windows.jpg',
+      '/images/aluminum-glass/Frameless Glass Systems.jpg',
+      '/images/aluminum-glass/Sliding Glass Doors.jpg',
     ],
   },
   'aluminum-windows-doors': {
-    hero: ['/images/cleaning/glass-and-window-cleaning.jpg'],
+    hero: [
+      '/images/aluminum-glass/Aluminum Windows.jpg',
+      '/images/aluminum-glass/Sliding Glass Doors.jpg',
+      '/images/aluminum-glass/Aluminum Fabrication.jpg',
+    ],
   },
   'glass-facades': {
-    hero: ['/images/cleaning/glass-and-window-cleaning.jpg'],
+    hero: [
+      '/images/aluminum-glass/Frameless Glass Systems.jpg',
+      '/images/aluminum-glass/Glass Installation Services.jpg',
+      '/images/aluminum-glass/Glass Partition Installation.jpg',
+    ],
   },
   'shades-curtains': {
     hero: [
+      '/images/aluminum-glass/Aluminum Cladding.jpg',
       '/images/cleaning/curtain-cleaning-service.jpg',
       '/images/landscaping/pergola installation.jpg',
     ],
@@ -540,22 +559,45 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
   // Insulation & Roofs / العزل والأسطح
   'insulation-roofs': {
     hero: [
-      '/images/leaks-plumbing/roof-waterproofing-Dammam.jpg',
-      '/images/leaks-plumbing/roof-leak-repair-Dammam.jpg',
+      '/images/insulation-roofs/Roof waterproofing Saudi Arabia.jpg',
+      '/images/insulation-roofs/Thermal insulation.jpg',
+      '/images/insulation-roofs/Roof insulation.jpg',
+      '/images/insulation-roofs/Building insulation services.jpg',
+    ],
+    gallery: [
+      '/images/insulation-roofs/Waterproofing services.jpg',
+      '/images/insulation-roofs/Heat-resistant coating.jpg',
+      '/images/insulation-roofs/Roof protection.jpg',
+      '/images/insulation-roofs/Roof repair Saudi Arabia.jpg',
+      '/images/insulation-roofs/Roof leak repair.jpg',
+      '/images/insulation-roofs/Thermal insulation.jpg',
     ],
   },
   'water-proofing': {
-    hero: ['/images/leaks-plumbing/roof-waterproofing-Dammam.jpg'],
+    hero: [
+      '/images/insulation-roofs/Roof waterproofing Saudi Arabia.jpg',
+      '/images/insulation-roofs/Waterproofing services.jpg',
+      '/images/insulation-roofs/Roof protection.jpg',
+    ],
   },
   'thermal-insulation': {
-    hero: ['/images/leaks-plumbing/roof-waterproofing-Dammam.jpg'],
+    hero: [
+      '/images/insulation-roofs/Thermal insulation.jpg',
+      '/images/insulation-roofs/Heat-resistant coating.jpg',
+      '/images/insulation-roofs/Building insulation services.jpg',
+    ],
   },
   'foam-bitumen': {
-    hero: ['/images/leaks-plumbing/roof-waterproofing-Dammam.jpg'],
+    hero: [
+      '/images/insulation-roofs/Roof insulation.jpg',
+      '/images/insulation-roofs/Waterproofing services.jpg',
+      '/images/insulation-roofs/Building insulation services.jpg',
+    ],
   },
   'cracks-treatment': {
     hero: [
-      '/images/leaks-plumbing/roof-leak-repair-Dammam.jpg',
+      '/images/insulation-roofs/Roof leak repair.jpg',
+      '/images/insulation-roofs/Roof repair Saudi Arabia.jpg',
       '/images/painting-gypsum/Crack-wall-repair.jpg',
     ],
   },
@@ -563,38 +605,86 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
   // Appliances / الأجهزة المنزلية
   appliances: {
     hero: [
-      '/images/ac/AC-maintenance.jpg',
-      '/images/electricity/electrical-repair-services.jpg',
+      '/images/appliances/Home appliance repair.jpg',
+      '/images/appliances/Appliance technician Saudi Arabia.jpg',
+      '/images/appliances/Home appliance maintenance.jpg',
+      '/images/appliances/Emergency appliance repair service.jpg',
+    ],
+    gallery: [
+      '/images/appliances/Washing machine repair.jpg',
+      '/images/appliances/Refrigerator repair service.jpg',
+      '/images/appliances/Oven and stove maintenance.jpg',
+      '/images/appliances/Home appliance repair.jpg',
+      '/images/appliances/Appliance technician Saudi Arabia.jpg',
+      '/images/appliances/Emergency appliance repair service.jpg',
     ],
   },
   'washing-machines': {
-    hero: ['/images/ac/AC-maintenance.jpg'],
+    hero: [
+      '/images/appliances/Washing machine repair.jpg',
+      '/images/appliances/Home appliance repair.jpg',
+      '/images/appliances/Appliance technician Saudi Arabia.jpg',
+    ],
   },
   refrigerators: {
-    hero: ['/images/ac/AC-maintenance.jpg'],
+    hero: [
+      '/images/appliances/Refrigerator repair service.jpg',
+      '/images/appliances/Home appliance maintenance.jpg',
+      '/images/appliances/Appliance technician Saudi Arabia.jpg',
+    ],
   },
   'ovens-stoves': {
-    hero: ['/images/ac/AC-maintenance.jpg'],
+    hero: [
+      '/images/appliances/Oven and stove maintenance.jpg',
+      '/images/appliances/Home appliance repair.jpg',
+      '/images/appliances/Emergency appliance repair service.jpg',
+    ],
   },
   dryers: {
-    hero: ['/images/ac/AC-maintenance.jpg'],
+    hero: [
+      '/images/appliances/Home appliance maintenance.jpg',
+      '/images/appliances/Appliance technician Saudi Arabia.jpg',
+      '/images/appliances/Emergency appliance repair service.jpg',
+    ],
   },
 
   // Car Towing / سطحة ونقل سيارات
   'car-towing': {
     hero: [
-      '/images/moving/moving-truck-rental.jpg',
-      '/images/moving/door-to-door-moving.jpg',
+      '/images/car-towing/Car towing service.jpg',
+      '/images/car-towing/Car transport services.jpg',
+      '/images/car-towing/Auto transport company.jpg',
+      '/images/car-towing/Vehicle shipping Saudi Arabia.jpg',
+    ],
+    gallery: [
+      '/images/car-towing/Car carrier service.jpg',
+      '/images/car-towing/Door-to-door car delivery.jpg',
+      '/images/car-towing/Long-distance car transport.jpg',
+      '/images/car-towing/Vehicle recovery.jpg',
+      '/images/car-towing/Car relocation services.jpg',
+      '/images/car-towing/Auto transport company.jpg',
     ],
   },
   'city-towing': {
-    hero: ['/images/moving/moving-truck-rental.jpg'],
+    hero: [
+      '/images/car-towing/Car towing service.jpg',
+      '/images/car-towing/Vehicle recovery.jpg',
+      '/images/car-towing/Car carrier service.jpg',
+    ],
   },
   'intercity-towing': {
-    hero: ['/images/moving/intercity-moving-Saudi-Arabia.jpg'],
+    hero: [
+      '/images/car-towing/Long-distance car transport.jpg',
+      '/images/car-towing/Vehicle shipping Saudi Arabia.jpg',
+      '/images/car-towing/Door-to-door car delivery.jpg',
+    ],
   },
   'luxury-car-transport': {
-    hero: ['/images/moving/insured-moving-company.jpg'],
+    hero: [
+      '/images/car-towing/Car relocation services.jpg',
+      '/images/car-towing/Auto transport company.jpg',
+      '/images/car-towing/Car transport services.jpg',
+    ],
   },
 };
 
