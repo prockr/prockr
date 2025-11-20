@@ -3,6 +3,8 @@ export type City = {
   name_ar: string;
   tier: 1 | 2 | 3;
   neighborhoods?: string[];
+  // Geocoding data available via lib/geocoding/cities-geocode.ts
+  // Use getCityGeocodeBySlug(slug) to access GPS coordinates and service radius
 };
 
 export const CITIES: City[] = [

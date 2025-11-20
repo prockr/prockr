@@ -52,6 +52,23 @@ Create strongly-typed data in /data with EN slugs + Arabic names.
 
 2.1) Cities (/data/cities.ts)
 export type City = { slug: string; name_ar: string; tier: 1|2|3; neighborhoods?: string[] }
+
+** GEOCODING SYSTEM **
+Complete GPS coordinates and location data available in /lib/geocoding/cities-geocode.ts
+Each city has:
+  - Precise GPS coordinates (lat/lng)
+  - Service radius (Tier 1: 40-50km, Tier 2: 30-35km, Tier 3: 20-25km)
+  - Administrative region (المنطقة الإدارية)
+  - City bounds (northeast/southwest coordinates)
+  - Population tier (large/medium/small)
+  - Timezone: Asia/Riyadh
+
+** IMAGE LOCATION MAPPING **
+Service images mapped to cities in /lib/geocoding/image-location-mapping.ts
+  - City-specific image variants for major cities
+  - Location-aware SEO alt tags (Arabic)
+  - Optimal image selection based on user location
+
 export const CITIES: City[] = [
   // Tier 1
   {slug:'riyadh', name_ar:'الرياض', tier:1, neighborhoods:['العليا','الياسمين','النرجس','الملز','الصحافة']},
