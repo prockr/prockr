@@ -10,11 +10,15 @@ import { CTASticky } from '@/components/CTASticky';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { TrustBadges } from '@/components/TrustBadges';
 import { Gallery } from '@/components/Gallery';
+import { InteractiveMap } from '@/components/InteractiveMap';
+import { LocationDetector } from '@/components/LocationDetector';
 import { composeServiceCityContent } from '@/lib/content';
 import { servicePath, subservicePath } from '@/lib/urls';
 import { getGalleryImages, getHeroImage } from '@/lib/images';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateServiceSchemaWithGeo, generateLocalBusinessSchema } from '@/lib/schema-geo';
+import { getServiceAvailabilityText, getNearbyCities } from '@/lib/geocoding';
 import type { Metadata } from 'next';
 
 export const revalidate = REVALIDATE_DEFAULT;
@@ -87,15 +91,14 @@ export default function ServiceCityPage({ params }: PageProps) {
   ];
 
   const schemas = [
-    generateServiceSchema({
-      serviceName: service.name_ar,
-      serviceType: service.name_ar,
-      cityName: city.name_ar,
-      description: content.meta,
-    }),
+    generateServiceSchemaWithGeo(service, city),
+    generateLocalBusinessSchema(city),
     generateFAQSchema(content.faqs),
     generateBreadcrumbSchema(breadcrumbs),
   ];
+
+  const nearbyCities = getNearbyCities(city.slug, 5);
+  const serviceAvailability = getServiceAvailabilityText(city.slug);
 
   return (
     <div className="min-h-screen">
@@ -179,6 +182,13 @@ export default function ServiceCityPage({ params }: PageProps) {
       <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
           <TrustBadges />
+        </div>
+      </section>
+
+      {/* Location Detector */}
+      <section className="py-6 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <LocationDetector showPrompt={false} />
         </div>
       </section>
 
@@ -592,6 +602,56 @@ export default function ServiceCityPage({ params }: PageProps) {
               معرض الصور - {service.name_ar}
             </h2>
             <Gallery images={getGalleryImages(service.slug).map(src => ({ src, alt: `${service.name_ar} - صورة` }))} />
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Map & Service Area */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              نطاق الخدمة في {city.name_ar}
+            </h2>
+            <p className="text-center text-gray-600 mb-8">
+              {serviceAvailability}
+            </p>
+            
+            <div className="mb-12">
+              <InteractiveMap 
+                citySlug={city.slug} 
+                height="500px" 
+                showServiceRadius={true}
+                showNearbyCities={true}
+              />
+            </div>
+
+            {/* Nearby Cities */}
+            {nearbyCities.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  خدماتنا متاحة أيضاً في المدن القريبة
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {nearbyCities.map((nearbyCity) => (
+                    <Link
+                      key={nearbyCity.slug}
+                      href={`/saudi/${nearbyCity.slug}/${service.slug}`}
+                      className="group bg-gray-50 hover:bg-primary-50 border border-gray-200 hover:border-primary-300 rounded-lg p-4 transition-all duration-300"
+                    >
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 group-hover:text-primary-600 mb-1">
+                          {nearbyCity.name_ar}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          {nearbyCity.region}
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
