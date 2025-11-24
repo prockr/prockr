@@ -8,7 +8,9 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CTASticky } from '@/components/CTASticky';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { TrustBadges } from '@/components/TrustBadges';
+import { RichContentSections } from '@/components/RichContentSections';
 import { composeServiceCityContent } from '@/lib/content';
+import { generateSubserviceRichContent } from '@/lib/rich-content';
 import { servicePath, subservicePath } from '@/lib/urls';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
@@ -81,6 +83,7 @@ export default function SubserviceCityPage({ params }: PageProps) {
   }
 
   const content = composeServiceCityContent({ city, service });
+  const richContent = generateSubserviceRichContent({ city, service, subservice });
 
   const breadcrumbs = [
     { label: 'الرئيسية', href: '/' },
@@ -560,6 +563,13 @@ export default function SubserviceCityPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName={subservice.name_ar} 
+        cityName={city.name_ar} 
+      />
 
       {/* Related Subservices */}
       {relatedSubservices.length > 0 && (

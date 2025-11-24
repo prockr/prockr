@@ -10,9 +10,11 @@ import { CTASticky } from '@/components/CTASticky';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { TrustBadges } from '@/components/TrustBadges';
 import { Gallery } from '@/components/Gallery';
-// import { InteractiveMap } from '@/components/InteractiveMap';
+// // import { InteractiveMap } from '@/components/InteractiveMap';
 import { LocationDetector } from '@/components/LocationDetector';
+import { RichContentSections } from '@/components/RichContentSections';
 import { composeServiceCityContent } from '@/lib/content';
+import { generateRichContent } from '@/lib/rich-content';
 import { servicePath, subservicePath } from '@/lib/urls';
 import { getGalleryImages, getHeroImage } from '@/lib/images';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
@@ -99,6 +101,7 @@ export default function ServiceCityPage({ params }: PageProps) {
 
   const nearbyCities = getNearbyCities(city.slug, 5);
   const serviceAvailability = getServiceAvailabilityText(city.slug);
+  const richContent = generateRichContent({ city, service });
 
   return (
     <div className="min-h-screen">
@@ -685,6 +688,13 @@ export default function ServiceCityPage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName={service.name_ar} 
+        cityName={city.name_ar} 
+      />
 
       {/* CTA Bottom */}
       <section className="py-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
