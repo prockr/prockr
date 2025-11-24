@@ -656,7 +656,7 @@ export default function ServiceHubPage({ params }: PageProps) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+966500000000"
+                  href="tel:+966548923300"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-bold"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,7 +698,7 @@ export default function ServiceHubPage({ params }: PageProps) {
               اختر المدينة
             </a>
             <a
-              href="tel:+966500000000"
+              href="tel:+966548923300"
               className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
             >
               📞 اتصل الآن

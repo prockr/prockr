@@ -180,7 +180,7 @@ export default function SubserviceHubPage({ params }: PageProps) {
                   اختر مدينتك
                 </a>
                 <a
-                  href="tel:+966500000000"
+                  href="tel:+966548923300"
                   className="px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-lg shadow-2xl transform hover:scale-105"
                 >
                   📞 اتصل الآن
@@ -611,7 +611,7 @@ export default function SubserviceHubPage({ params }: PageProps) {
               اختر المدينة
             </a>
             <a
-              href="tel:+966500000000"
+              href="tel:+966548923300"
               className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
             >
               📞 اتصل الآن

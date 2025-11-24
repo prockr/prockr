@@ -121,7 +121,7 @@ export default function DealsPage({ params }: PageProps) {
                 اطلع على العروض
               </a>
               <a
-                href="tel:+966500000000"
+                href="tel:+966548923300"
                 className="px-10 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
               >
                 احجز الآن
@@ -193,7 +193,7 @@ export default function DealsPage({ params }: PageProps) {
 
                     {/* CTA Button */}
                     <a
-                      href="tel:+966500000000"
+                      href="tel:+966548923300"
                       className="block text-center py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-bold"
                     >
                       احجز الآن
@@ -339,7 +339,7 @@ export default function DealsPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+966500000000"
+              href="tel:+966548923300"
               className="px-10 py-5 bg-white text-red-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
             >
               📞 اتصل الآن
