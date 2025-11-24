@@ -10,7 +10,7 @@ import { CTASticky } from '@/components/CTASticky';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { TrustBadges } from '@/components/TrustBadges';
 import { Gallery } from '@/components/Gallery';
-import { InteractiveMap } from '@/components/InteractiveMap';
+// import { InteractiveMap } from '@/components/InteractiveMap';
 import { LocationDetector } from '@/components/LocationDetector';
 import { composeServiceCityContent } from '@/lib/content';
 import { servicePath, subservicePath } from '@/lib/urls';
@@ -617,14 +617,15 @@ export default function ServiceCityPage({ params }: PageProps) {
               {serviceAvailability}
             </p>
             
-            <div className="mb-12">
+            {/* Temporarily disabled until Google Maps API key is fixed */}
+            {/* <div className="mb-12">
               <InteractiveMap 
                 citySlug={city.slug} 
                 height="500px" 
                 showServiceRadius={true}
                 showNearbyCities={true}
               />
-            </div>
+            </div> */}
 
             {/* Nearby Cities */}
             {nearbyCities.length > 0 && (
