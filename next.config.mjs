@@ -24,6 +24,9 @@ const nextConfig = {
       dynamic: 86400, // 1 day
     },
   },
+  // Redirects configuration - not used for 404s as they need special handling
+  // 404s are handled by not-found.tsx with client-side redirect
+  
   // Headers for caching and AI optimization
   async headers() {
     return [
