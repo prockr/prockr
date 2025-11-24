@@ -10,6 +10,10 @@ interface InteractiveMapProps {
   showNearbyCities?: boolean;
 }
 
+// Global flag to track if script is loading
+let isScriptLoading = false;
+let isScriptLoaded = false;
+
 /**
  * Interactive Map Component using Google Maps
  * Displays city location, service radius, and nearby cities
@@ -31,22 +35,59 @@ export function InteractiveMap({
       return;
     }
 
-    // Load Google Maps script
-    const loadGoogleMaps = () => {
-      if (typeof window !== 'undefined' && !(window as Window & typeof globalThis & { google?: unknown }).google) {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&language=ar&region=SA`;
-        script.async = true;
-        script.defer = true;
-        script.onload = () => setIsLoaded(true);
-        script.onerror = () => setError('فشل تحميل الخريطة');
-        document.head.appendChild(script);
-      } else if ((window as Window & typeof globalThis & { google?: unknown }).google) {
-        setIsLoaded(true);
-      }
+    // Check if Google Maps is already loaded
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof window !== 'undefined' && (window as any).google?.maps) {
+      setIsLoaded(true);
+      isScriptLoaded = true;
+      return;
+    }
+
+    // If script is already loaded (from another component)
+    if (isScriptLoaded) {
+      setIsLoaded(true);
+      return;
+    }
+
+    // If script is currently loading, wait for it
+    if (isScriptLoading) {
+      const checkInterval = setInterval(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if ((window as any).google?.maps) {
+          setIsLoaded(true);
+          isScriptLoaded = true;
+          clearInterval(checkInterval);
+        }
+      }, 100);
+
+      return () => clearInterval(checkInterval);
+    }
+
+    // Load Google Maps script for the first time
+    isScriptLoading = true;
+
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&language=ar&region=SA`;
+    script.async = true;
+    script.defer = true;
+    
+    script.onload = () => {
+      isScriptLoading = false;
+      isScriptLoaded = true;
+      setIsLoaded(true);
+    };
+    
+    script.onerror = () => {
+      isScriptLoading = false;
+      setError('فشل تحميل الخريطة. تحقق من API Key.');
+      console.error('Failed to load Google Maps script');
     };
 
-    loadGoogleMaps();
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup: don't remove script as other components might need it
+    };
   }, [cityData]);
 
   useEffect(() => {
