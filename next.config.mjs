@@ -15,6 +15,10 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
     remotePatterns: [],
+    // Optimizations for better performance
+    loader: 'default',
+    path: '/_next/image',
+    domains: [],
   },
   // Compression
   compress: true,
