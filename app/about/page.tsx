@@ -201,6 +201,104 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* How We Work */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
+              كيف نعمل؟
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">فحص دقيق لمقدمي الخدمات</h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    نختار مقدمي الخدمات بعناية فائقة. كل مقدم خدمة يمر بعملية فحص شاملة تشمل التحقق من الخبرة، المؤهلات، السجل الجنائي، والتراخيص اللازمة. نرفض أكثر من 70% من المتقدمين لضمان أعلى معايير الجودة. بعد القبول، نوفر تدريباً مستمراً على أفضل الممارسات ومعايير الخدمة العالية. نتابع أداء كل مقدم خدمة بانتظام ونجري تقييمات دورية لضمان استمرارية الجودة.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">ربط ذكي بين العملاء والمزودين</h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    عندما تطلب خدمة، تقنيتنا المتطورة تربطك تلقائياً بأفضل مقدم خدمة متاح في منطقتك. نأخذ في الاعتبار عدة عوامل: القرب الجغرافي، التقييمات السابقة، التخصص في نوع الخدمة المطلوبة، والتوفر الفوري. هذا يضمن لك الحصول على أفضل خدمة ممكنة في أسرع وقت. نظامنا يراقب كل طلب لحظة بلحظة ويتدخل فوراً إذا حدثت أي مشكلة. هدفنا هو توفير تجربة سلسة من البداية للنهاية.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">تنفيذ احترافي مع ضمان الجودة</h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    مقدم الخدمة يصل في الموعد المحدد، مجهز بكل المعدات اللازمة. أثناء تنفيذ الخدمة، نتابع معك ومع مقدم الخدمة لضمان سير كل شيء بسلاسة. نوفر خط اتصال مباشر بفريق الدعم لأي استفسار أو مشكلة. بعد إتمام الخدمة، نتواصل معك للتأكد من رضاك الكامل. نطلب تقييمك الصادق الذي يساعدنا على التحسين المستمر. كل خدمة مغطاة بضمان مكتوب نلتزم به كاملاً، وإذا حدثت أي مشكلة، نحلها فوراً ومجاناً.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">متابعة ما بعد الخدمة وضمان الرضا</h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    علاقتنا معك لا تنتهي بإتمام الخدمة. نتابع معك خلال 24-48 ساعة للتأكد من رضاك واستمرار جودة الخدمة. إذا ظهرت أي مشكلة، نتعامل معها فوراً بدون تكلفة إضافية. نحتفظ بسجل كامل لجميع خدماتك معنا لتوفير خدمة أفضل في المرات القادمة. عملاؤنا الدائمون يحصلون على مزايا إضافية وأولوية في الحجز. نستمع لملاحظاتك واقتراحاتك ونستخدمها لتحسين خدماتنا باستمرار. رضاك التام هو معيار نجاحنا الحقيقي.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Coverage */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+              تغطيتنا الشاملة في المملكة
+            </h2>
+            <p className="text-xl text-gray-700 text-center mb-12 leading-relaxed max-w-3xl mx-auto">
+              نفخر بتقديم خدماتنا في أكثر من 45 مدينة سعودية، من أكبر المدن إلى المدن الصغيرة. أينما كنت في المملكة، بروكر معك.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary-600 mb-4">المدن الرئيسية (Tier 1)</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  نوفر خدمة شاملة ومتكاملة في المدن الكبرى بما في ذلك الرياض، جدة، مكة المكرمة، المدينة المنورة، والدمام. في هذه المدن، لدينا فرق متعددة ومعدات كاملة وقدرة على الاستجابة الفورية حتى للطلبات العاجلة. نغطي جميع أحياء هذه المدن دون استثناء، ونوفر خدمة طوارئ 24/7 طوال أيام الأسبوع. عملاؤنا في المدن الرئيسية يحصلون على وقت استجابة أقل من 60 دقيقة في معظم الحالات.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary-600 mb-4">المدن الثانوية والصغيرة</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  نحن لا نقتصر على المدن الكبرى فقط. نخدم أيضاً المدن المتوسطة والصغيرة في جميع مناطق المملكة. رؤيتنا هي جعل الخدمات المنزلية الاحترافية متاحة للجميع، بغض النظر عن موقعهم. في كل مدينة، نعمل مع مقدمي خدمات محليين يعرفون المنطقة جيداً ويفهمون احتياجاتها الخاصة. نفس المعايير العالية للجودة والاحترافية تطبق في كل مكان نخدمه.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">التوسع المستمر</h3>
+              <p className="text-gray-700 text-lg text-center leading-relaxed">
+                نعمل باستمرار على توسيع تغطيتنا لتشمل مدناً جديدة. خطتنا هي الوصول إلى 100+ مدينة سعودية خلال السنوات القادمة. إذا كانت مدينتك غير مغطاة حالياً، ترقب ذلك قريباً! يمكنك التسجيل في قائمة الانتظار لنخبرك فور توفر خدماتنا في منطقتك. توسعنا مبني على احتياجات عملائنا واقتراحاتهم، لذا صوتك مهم في تحديد وجهتنا التالية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

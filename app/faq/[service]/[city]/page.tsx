@@ -6,7 +6,9 @@ import { FAQ } from '@/components/FAQ';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CTASticky } from '@/components/CTASticky';
 import { SchemaInjector } from '@/components/SchemaInjector';
+import { RichContentSections } from '@/components/RichContentSections';
 import { composeServiceCityContent } from '@/lib/content';
+import { generateFAQContent } from '@/lib/rich-content';
 import { servicePath, faqPath } from '@/lib/urls';
 import { generateFAQSchema } from '@/lib/schema';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
@@ -70,6 +72,7 @@ export default function FAQPage({ params }: PageProps) {
   }
 
   const content = composeServiceCityContent({ city, service });
+  const richContent = generateFAQContent({ city, service });
 
   const breadcrumbs = [
     { label: 'الرئيسية', href: '/' },
@@ -324,7 +327,7 @@ export default function FAQPage({ params }: PageProps) {
               📞 اتصل الآن
             </a>
             <a
-              href="https://wa.me/966500000000"
+              href="https://wa.me/966548923300"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
@@ -334,6 +337,13 @@ export default function FAQPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName={service.name_ar} 
+        cityName={city.name_ar}
+      />
     </div>
   );
 }

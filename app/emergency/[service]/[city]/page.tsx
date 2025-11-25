@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { CITIES, getCityBySlug } from '@/data/cities';
 import { SERVICES, getServiceBySlug } from '@/data/services';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { RichContentSections } from '@/components/RichContentSections';
 import { generateMetadata as genMetadata, buildBreadcrumbs } from '@/lib/seo';
+import { generateEmergencyContent } from '@/lib/rich-content';
 import { cityPath, servicePath, emergencyPath } from '@/lib/urls';
 import { REVALIDATE_DEFAULT, PHONE, WHATSAPP } from '@/lib/constants';
 
@@ -55,6 +57,8 @@ export default function EmergencyPage({
   if (!city || !service) {
     notFound();
   }
+
+  const richContent = generateEmergencyContent({ city, service });
 
   const breadcrumbs = buildBreadcrumbs([
     { label: 'السعودية', href: '/saudi' },
@@ -270,6 +274,13 @@ export default function EmergencyPage({
           </Link>
         </div>
       </div>
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName={service.name_ar} 
+        cityName={city.name_ar}
+      />
     </div>
   );
 }
