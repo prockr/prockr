@@ -5,7 +5,9 @@ import { SERVICES } from '@/data/services';
 import { ServiceCard } from '@/components/ServiceCard';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { TrustBadges } from '@/components/TrustBadges';
+import { RichContentSections } from '@/components/RichContentSections';
 import { cityPath, servicePath } from '@/lib/urls';
+import { generateCityContent } from '@/lib/rich-content';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
 import type { Metadata } from 'next';
 
@@ -53,6 +55,8 @@ export default function CityHubPage({ params }: PageProps) {
   if (!city) {
     notFound();
   }
+
+  const richContent = generateCityContent({ city });
 
   const breadcrumbs = [
     { label: 'الرئيسية', href: '/' },
@@ -244,7 +248,7 @@ export default function CityHubPage({ params }: PageProps) {
               📞 اتصل الآن
             </a>
             <a
-              href="https://wa.me/966500000000"
+              href="https://wa.me/966548923300"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
@@ -260,6 +264,13 @@ export default function CityHubPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName="الخدمات المنزلية" 
+        cityName={city.name_ar}
+      />
     </div>
   );
 }
