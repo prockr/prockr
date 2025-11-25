@@ -7,6 +7,8 @@ import { CitySelector } from '@/components/CitySelector';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { FAQ } from '@/components/FAQ';
 import { TrustBadges } from '@/components/TrustBadges';
+import { RichContentSections } from '@/components/RichContentSections';
+import { generateGeneralSubserviceContent } from '@/lib/rich-content';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
 import type { Metadata } from 'next';
 
@@ -67,6 +69,7 @@ export default function SubserviceHubPage({ params }: PageProps) {
   }
 
   const tier1Cities = getTier1Cities();
+  const richContent = generateGeneralSubserviceContent({ service, subservice });
 
   const breadcrumbs = [
     { label: 'الرئيسية', href: '/' },
@@ -617,7 +620,7 @@ export default function SubserviceHubPage({ params }: PageProps) {
               📞 اتصل الآن
             </a>
             <a
-              href="https://wa.me/966500000000"
+              href="https://wa.me/966548923300"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
@@ -627,6 +630,13 @@ export default function SubserviceHubPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Rich Content Sections */}
+      <RichContentSections 
+        content={richContent} 
+        serviceName={subservice.name_ar} 
+        cityName="المملكة"
+      />
     </div>
   );
 }

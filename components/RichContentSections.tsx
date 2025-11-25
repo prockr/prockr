@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { RichServiceContent } from '@/lib/rich-content';
 
 interface RichContentSectionsProps {
-  content: RichServiceContent;
+  content: Partial<RichServiceContent>;
   serviceName: string;
   cityName: string;
 }
