@@ -1,6 +1,7 @@
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { REVALIDATE_DEFAULT, PHONE, WHATSAPP } from '@/lib/constants';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -568,15 +569,189 @@ export default function ProvidersPage() {
         </div>
       </section>
 
+      {/* Financial Benefits */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              الفوائد المالية للانضمام
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              استثمر في مستقبلك مع بروكر - منصة تضمن لك دخلاً مستداماً ونمواً حقيقياً
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8">
+                <div className="text-6xl mb-6 text-center">📈</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">نمو دخل مثبت</h3>
+                <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                  شركاؤنا يشهدون زيادة ملموسة في دخلهم خلال الأشهر الأولى من الانضمام. متوسط الزيادة يتراوح بين <strong className="text-green-600">200-300%</strong> خلال أول 6 أشهر. هذا ليس مجرد وعد - إنها أرقام حقيقية من شركائنا الحاليين.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  كلما قدمت خدمات أكثر وحصلت على تقييمات أفضل، كلما زاد عدد الطلبات التي نوجهها إليك. نظام الأولوية لدينا يكافئ الجودة والالتزام، مما يعني أن أفضل الشركاء يحصلون على أفضل الفرص.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl p-8">
+                <div className="text-6xl mb-6 text-center">💵</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">دخل مستمر ومتوقع</h3>
+                <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                  على عكس الاعتماد على التوصيات العشوائية، بروكر توفر لك <strong className="text-blue-600">تدفق مستمر من العملاء</strong>. لا مزيد من الأيام الفارغة أو القلق حول العميل التالي. مع آلاف المستخدمين النشطين على منصتنا، الطلبات تأتي باستمرار.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  يمكنك التخطيط لمستقبلك المالي بثقة. العديد من شركائنا تمكنوا من توظيف المزيد من الفنيين، شراء معدات جديدة، وحتى فتح فروع إضافية بفضل الدخل المستقر من بروكر. نحن لا نوفر لك عملاء فقط - نوفر لك استقراراً مالياً.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <div className="text-7xl">🎯</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">نموذج عمولة عادل وشفاف</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    لا توجد رسوم انضمام أو اشتراكات شهرية. نحصل فقط على نسبة صغيرة من كل خدمة تقدمها بنجاح. هذا يعني أننا ننجح فقط عندما تنجح أنت. مصلحتنا ومصلحتك متطابقة تماماً - كلما قدمت خدمات أكثر وأفضل، ربحنا أكثر معاً.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    النسبة التي نحصل عليها تذهب لتغطية تكاليف <Link href="/about" className="text-yellow-600 font-semibold hover:underline">التسويق المكثف</Link>، تطوير المنصة، خدمة العملاء 24/7، ونظام الدفع الآمن. أنت تحصل على عملاء مستمرين، ونحن نحصل على نسبة فقط عندما تنجح الخدمة - win-win حقيقي!
+                  </p>
+                  <div className="bg-white rounded-lg p-6 border-r-4 border-yellow-500">
+                    <p className="text-gray-900 font-bold text-lg mb-2">💡 مثال عملي:</p>
+                    <p className="text-gray-700">
+                      إذا كنت تقدم خدمة <Link href="/services/ac" className="text-yellow-600 font-semibold hover:underline">صيانة تكييف</Link> بقيمة 500 ريال، أنت تحصل على الغالبية العظمى من المبلغ، ونحن نحصل على نسبة صغيرة. ومع 10-15 طلب أسبوعياً (وهو متوسط واقعي)، هذا يعني دخل إضافي كبير جداً بدون أي تكاليف تسويق من جانبك!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Support and Resources */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              الدعم والموارد المتاحة لك
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              لن تكون وحدك - فريق كامل لدعمك في كل خطوة
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-3xl">
+                  👨‍💻
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">دعم فني متخصص 24/7</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    فريق الدعم التقني لدينا متاح على مدار الساعة لمساعدتك في أي مشكلة تواجهها مع المنصة. سواء كانت مشكلة في تسجيل الدخول، صعوبة في قبول طلب، أو استفسار حول الدفع - نحن هنا لحلها فوراً.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    متوسط وقت الاستجابة لدينا أقل من 30 دقيقة. نفهم أن الوقت ثمين بالنسبة لك، لذلك نعمل بسرعة لحل أي مشكلة تعيقك عن تقديم خدماتك للعملاء.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-3xl">
+                  📚
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">مكتبة تدريبية شاملة</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    نوفر مكتبة ضخمة من الفيديوهات التدريبية، الأدلة المصورة، وأفضل الممارسات. تعلم كيفية استخدام المنصة بكفاءة، كيفية التعامل مع العملاء بشكل احترافي، وكيفية زيادة تقييماتك للحصول على المزيد من الطلبات.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    نقوم بتحديث المحتوى التدريبي بانتظام بناءً على أسئلة واستفسارات شركائنا. المعرفة قوة، ونحن نريدك أن تكون قوياً!
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl">
+                  📊
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">تقارير وإحصائيات تفصيلية</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    لوحة التحكم الخاصة بك توفر رؤية شاملة لأدائك: عدد الطلبات المكتملة، متوسط التقييم، الأرباح الأسبوعية والشهرية، أوقات الذروة، والمزيد. هذه البيانات تساعدك على اتخاذ قرارات ذكية لتنمية أعمالك.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    يمكنك تتبع أدائك مقارنة بالشهر السابق، معرفة أي <Link href="/services" className="text-blue-600 font-semibold hover:underline">الخدمات</Link> الأكثر طلباً في منطقتك، وتخطيط استراتيجيتك بناءً على بيانات حقيقية وليس تخمينات.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl">
+                  🎓
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">ورش عمل ولقاءات دورية</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    ننظم ورش عمل شهرية (أونلاين وحضورياً) لمناقشة التحديات، مشاركة أفضل الممارسات، والتعلم من تجارب الشركاء الناجحين. هذه اللقاءات فرصة رائعة للتواصل مع زملائك وبناء شبكة علاقات مهنية قوية.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    كما ندعو خبراء ومتخصصين لتقديم ورش عمل متقدمة في مجالات مثل خدمة العملاء، التسويق الشخصي، وإدارة الأعمال الصغيرة. استثمارنا في تطويرك هو استثمار في نجاح بروكر.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Advantages */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              ميزة التغطية الواسعة
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              استفد من شبكتنا الضخمة في جميع أنحاء المملكة
+            </p>
+
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6 mb-12">
+              <p className="text-xl">
+                كونك شريكاً في بروكر يعني أنك جزء من شبكة تغطي <Link href="/coverage" className="text-primary-600 font-semibold hover:underline">أكثر من 40 مدينة سعودية</Link>. هذه التغطية الواسعة ليست مجرد رقم - إنها ميزة حقيقية تفتح لك أبواباً لم تكن متاحة من قبل.
+              </p>
+
+              <p className="text-xl">
+                إذا كنت تقدم خدمات في <Link href="/saudi/riyadh" className="text-primary-600 font-semibold hover:underline">الرياض</Link> وتريد التوسع إلى <Link href="/saudi/jeddah" className="text-primary-600 font-semibold hover:underline">جدة</Link> أو <Link href="/saudi/dammam" className="text-primary-600 font-semibold hover:underline">الدمام</Link>، بروكر تسهل لك ذلك. لديك بالفعل ملف شخصي، تقييمات إيجابية، وسمعة ممتازة - يمكنك نقل هذا النجاح إلى مدن أخرى بسهولة.
+              </p>
+
+              <p className="text-xl">
+                بالإضافة لذلك، تغطيتنا الواسعة تعني تدفق مستمر للعملاء. حتى في أوقات هدوء النشاط في مدينتك، قد نوجه إليك طلبات من مدن قريبة إذا كنت مستعداً لخدمة مناطق أوسع. المرونة الجغرافية = المزيد من الفرص.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8 border-r-4 border-primary-600">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <span className="text-4xl">🌟</span>
+                شهادة شريك معتمد
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                عند انضمامك، تحصل على شهادة &ldquo;شريك بروكر المعتمد&rdquo; التي يمكنك استخدامها في تسويقك الشخصي. هذه الشهادة تحمل وزناً كبيراً عند العملاء - إنها تدل على أنك مقدم خدمة موثوق، معتمد، ومراقب من قبل منصة رائدة في المجال. استخدمها في موادك التسويقية، موقعك الإلكتروني، وصفحاتك على السوشيال ميديا!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-br from-green-600 to-green-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-green-600 to-green-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-7xl mb-6 animate-bounce">🤝</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               جاهز للانضمام؟
             </h2>
-            <p className="text-2xl text-green-100 mb-8 leading-relaxed">
-              لا تفوت فرصة النمو مع أكبر منصة للخدمات المنزلية في المملكة. تواصل معنا الآن وابدأ رحلة النجاح!
+            <p className="text-2xl text-green-100 mb-10 leading-relaxed">
+              لا تفوت فرصة النمو مع أكبر منصة للخدمات المنزلية في المملكة. تواصل معنا الآن وابدأ رحلة النجاح! أكثر من <strong className="text-yellow-300">1000 شريك</strong> يثقون بنا - كن واحداً منهم!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -603,9 +778,21 @@ export default function ProvidersPage() {
               </a>
             </div>
 
-            <div className="text-green-200">
-              <p className="mb-2">📧 البريد الإلكتروني: providers@prokr.com</p>
-              <p>⏰ نرد على جميع الاستفسارات خلال 24 ساعة</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+              <div className="text-green-100 space-y-2">
+                <p className="flex items-center justify-center gap-2">
+                  <span className="text-2xl">📧</span>
+                  <span>البريد الإلكتروني: providers@prokr.com</span>
+                </p>
+                <p className="flex items-center justify-center gap-2">
+                  <span className="text-2xl">⏰</span>
+                  <span>نرد على جميع الاستفسارات خلال 24 ساعة</span>
+                </p>
+                <p className="flex items-center justify-center gap-2 text-yellow-300 font-bold">
+                  <span className="text-2xl">🎁</span>
+                  <span>عرض خاص: لا رسوم انضمام للشهر الأول!</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
