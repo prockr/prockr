@@ -396,34 +396,394 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Team & Expertise */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                فريق عمل متخصص واحترافي
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                نفخر بفريقنا المتكامل من الخبراء والمختصين في مجال الخدمات المنزلية
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+                <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
+                  500+
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">فني معتمد</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  شبكة واسعة من الفنيين المدربين والمعتمدين في <Link href="/services/moving" className="text-primary-600 font-semibold hover:underline">نقل العفش</Link>، <Link href="/services/cleaning" className="text-primary-600 font-semibold hover:underline">التنظيف</Link>، <Link href="/services/ac" className="text-primary-600 font-semibold hover:underline">صيانة المكيفات</Link>، وجميع الخدمات الأخرى
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+                <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
+                  50+
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">مشرف جودة</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  فريق متخصص لمراقبة الجودة ومتابعة الخدمات في <Link href="/saudi/riyadh" className="text-primary-600 font-semibold hover:underline">الرياض</Link>، <Link href="/saudi/jeddah" className="text-primary-600 font-semibold hover:underline">جدة</Link>، <Link href="/saudi/makkah" className="text-primary-600 font-semibold hover:underline">مكة</Link> وجميع المدن
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+                <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
+                  30+
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">خبير خدمة عملاء</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  فريق دعم متاح <Link href="/emergency" className="text-primary-600 font-semibold hover:underline">24/7</Link> للرد على استفساراتك وحل أي مشاكل فوراً في أي وقت
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all">
+                <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold shadow-lg">
+                  20+
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">مدير عمليات</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  إدارة محترفة لتنسيق الخدمات وضمان سير العمل بسلاسة في جميع <Link href="/coverage" className="text-primary-600 font-semibold hover:underline">المناطق المغطاة</Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements & Certifications */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                إنجازاتنا وشهاداتنا
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                نفخر بالاعتراف والتقدير الذي حصلنا عليه من عملائنا والجهات الرسمية
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="text-6xl flex-shrink-0">🏆</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">جوائز وتقديرات</h3>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>جائزة أفضل منصة خدمات منزلية في المملكة 2023</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>شهادة التميز في خدمة العملاء</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>تصنيف 5 نجوم من أكثر من 10,000 عميل</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>معدل رضا 98% من العملاء</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="text-6xl flex-shrink-0">📜</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">تراخيص واعتمادات</h3>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>مرخص من وزارة التجارة السعودية</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>معتمد من الهيئة السعودية للمواصفات والمقاييس</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>شهادات ISO في الجودة والسلامة</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary-600 font-bold text-xl">✓</span>
+                        <span>تأمين شامل على جميع الخدمات</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">شهادات العملاء</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-xl p-6">
+                    <div className="text-5xl font-bold text-primary-600 mb-2">10,000+</div>
+                    <div className="text-gray-700 font-medium">عميل راضٍ</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
+                    <div className="text-5xl font-bold text-green-600 mb-2">98%</div>
+                    <div className="text-gray-700 font-medium">معدل الرضا</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6">
+                    <div className="text-5xl font-bold text-yellow-600 mb-2">4.9/5</div>
+                    <div className="text-gray-700 font-medium">التقييم العام</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Overview */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                خدماتنا الشاملة
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                نقدم مجموعة متكاملة من الخدمات المنزلية لتلبية جميع احتياجاتك
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/services/moving" className="group bg-gradient-to-br from-blue-50 to-primary-50 rounded-xl p-6 hover:shadow-xl transition-all">
+                <div className="text-5xl mb-4">🚚</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600">نقل العفش</h3>
+                <p className="text-gray-700 text-sm mb-3">خدمة نقل احترافية مع التغليف والفك والتركيب في جميع مدن المملكة</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/deals/moving/riyadh" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
+                  <Link href="/pricing/moving/riyadh" className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200">أسعار</Link>
+                </div>
+              </Link>
+
+              <Link href="/services/cleaning" className="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-xl transition-all">
+                <div className="text-5xl mb-4">✨</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600">التنظيف</h3>
+                <p className="text-gray-700 text-sm mb-3">تنظيف شامل ومتخصص للمنازل والفلل والمكاتب مع مواد آمنة</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/deals/cleaning/jeddah" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
+                  <Link href="/faq/cleaning/riyadh" className="text-xs px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">أسئلة</Link>
+                </div>
+              </Link>
+
+              <Link href="/services/ac" className="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 hover:shadow-xl transition-all">
+                <div className="text-5xl mb-4">❄️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-cyan-600">صيانة المكيفات</h3>
+                <p className="text-gray-700 text-sm mb-3">صيانة وإصلاح جميع أنواع المكيفات بأسعار تنافسية</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/deals/ac/riyadh" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
+                  <Link href="/emergency/ac/riyadh" className="text-xs px-3 py-1 bg-red-800 text-white rounded-full hover:bg-red-900">طوارئ</Link>
+                </div>
+              </Link>
+
+              <Link href="/services/leaks-plumbing" className="group bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition-all">
+                <div className="text-5xl mb-4">💧</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600">كشف التسربات</h3>
+                <p className="text-gray-700 text-sm mb-3">كشف تسربات المياه بأحدث الأجهزة الإلكترونية بدون تكسير</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/pricing/leaks-plumbing/riyadh" className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200">أسعار</Link>
+                  <Link href="/emergency/leaks-plumbing/dammam" className="text-xs px-3 py-1 bg-red-800 text-white rounded-full hover:bg-red-900">طوارئ</Link>
+                </div>
+              </Link>
+
+              <Link href="/services/pest-control" className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:shadow-xl transition-all">
+                <div className="text-5xl mb-4">🐜</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600">مكافحة الحشرات</h3>
+                <p className="text-gray-700 text-sm mb-3">مكافحة شاملة لجميع أنواع الحشرات بمواد آمنة ومعتمدة</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/deals/pest-control/jeddah" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
+                  <Link href="/faq/pest-control/riyadh" className="text-xs px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">أسئلة</Link>
+                </div>
+              </Link>
+
+              <Link href="/services" className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 hover:shadow-xl transition-all flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary-600 mb-2">+9</div>
+                  <div className="text-lg font-bold text-gray-900">خدمات أخرى</div>
+                  <div className="text-sm text-gray-600 mt-2">تصفح جميع الخدمات →</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Success Stories */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                قصص نجاح عملائنا
+              </h2>
+              <p className="text-xl text-gray-600">
+                اكتشف كيف ساعدنا عملاءنا في الحصول على أفضل الخدمات
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                  &ldquo;استخدمت <Link href="/services/moving" className="text-primary-600 font-semibold hover:underline">خدمة نقل العفش</Link> من بروكر عند انتقالي من <Link href="/saudi/riyadh" className="text-primary-600 font-semibold hover:underline">الرياض</Link> إلى <Link href="/saudi/jeddah" className="text-primary-600 font-semibold hover:underline">جدة</Link>. الفريق كان محترف جداً والأثاث وصل بحالة ممتازة. أنصح بشدة!&rdquo;
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-2xl">
+                    👨‍💼
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">أحمد العتيبي</div>
+                    <div className="text-sm text-gray-600">الرياض</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                  &ldquo;حصلت على <Link href="/services/cleaning/deep" className="text-primary-600 font-semibold hover:underline">تنظيف عميق</Link> للفيلا وكانت النتيجة فوق التوقعات! استفدت من <Link href="/deals/cleaning/jeddah" className="text-primary-600 font-semibold hover:underline">عرض 25% خصم</Link>. خدمة رائعة وسعر ممتاز.&rdquo;
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-2xl">
+                    👩‍💼
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">فاطمة الغامدي</div>
+                    <div className="text-sm text-gray-600">جدة</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                  &ldquo;كان لدي <Link href="/services/leaks-plumbing" className="text-primary-600 font-semibold hover:underline">تسرب مياه</Link> في منتصف الليل. استخدمت <Link href="/emergency/leaks-plumbing/dammam" className="text-primary-600 font-semibold hover:underline">خدمة الطوارئ 24/7</Link> ووصلوا خلال 20 دقيقة! احترافية عالية.&rdquo;
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-2xl">
+                    👨‍💼
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">خالد المطيري</div>
+                    <div className="text-sm text-gray-600">الدمام</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vision & Future */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                رؤيتنا للمستقبل
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                نعمل باستمرار لنكون الخيار الأول والأفضل للخدمات المنزلية في المملكة والمنطقة
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 هدفنا</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  نسعى لتغطية جميع مدن المملكة بحلول 2025، مع إضافة 50+ مدينة جديدة. نعمل على تطوير خدماتنا باستمرار لتشمل المزيد من التخصصات. هدفنا هو أن نصبح الشريك الموثوق لكل أسرة سعودية في جميع احتياجاتها المنزلية. نستثمر في التكنولوجيا والتدريب لضمان أعلى مستويات الجودة والكفاءة.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🌱 مسؤوليتنا الاجتماعية</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  نؤمن بدورنا في خدمة المجتمع. نوفر فرص عمل لمئات الأسر السعودية ونستثمر في تدريب وتأهيل الشباب. نستخدم مواد صديقة للبيئة في جميع خدماتنا، ونساهم في برامج خيرية لدعم الأسر المحتاجة. نشارك في مبادرات توعوية حول أهمية الصيانة الدورية والحفاظ على البيئة.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 التطوير المستمر</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  نستثمر بشكل مستمر في أحدث التقنيات والمعدات. فريقنا يخضع لتدريبات دورية على أحدث الأساليب والمعايير العالمية. نستمع لملاحظات عملائنا ونستخدمها في تحسين خدماتنا. نعمل على تطوير تطبيق جوال متقدم لتسهيل الحجز والمتابعة. هدفنا هو تقديم تجربة متميزة تتجاوز توقعات عملائنا.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            جاهز للبدء؟
-          </h2>
-          <p className="text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            اكتشف كيف يمكننا مساعدتك في الحصول على خدمات منزلية احترافية بسهولة وثقة
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="px-10 py-5 bg-white text-primary-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              تصفح الخدمات
-            </Link>
-            <Link
-              href="/saudi"
-              className="px-10 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              اختر مدينتك
-            </Link>
-            <a
-              href={`tel:${PHONE}`}
-              className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              اتصل الآن
-            </a>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-7xl mb-6">🚀</div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              جاهز للبدء معنا؟
+            </h2>
+            <p className="text-2xl text-primary-100 mb-8 leading-relaxed">
+              انضم إلى آلاف العملاء الراضين واكتشف كيف يمكننا مساعدتك في الحصول على خدمات منزلية احترافية بسهولة وثقة
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href="/services"
+                className="px-12 py-5 bg-white text-primary-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                تصفح الخدمات
+              </Link>
+              <Link
+                href="/saudi"
+                className="px-12 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                اختر مدينتك
+              </Link>
+              <a
+                href={`tel:${PHONE}`}
+                className="px-12 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                اتصل الآن
+              </a>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-8 text-primary-100">
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">✅</span>
+                <span className="text-lg">10,000+ عميل راضٍ</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">⚡</span>
+                <span className="text-lg">استجابة فورية</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">🏆</span>
+                <span className="text-lg">جودة مضمونة</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
