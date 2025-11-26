@@ -332,22 +332,452 @@ export default function EmergencyHubPage() {
         </div>
       </section>
 
+      {/* What Makes Us Different in Emergencies */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              ما الذي يميز خدمة الطوارئ لدينا؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              نقدم أكثر من مجرد استجابة سريعة - نقدم حلول شاملة وموثوقة
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-600 text-white rounded-xl flex items-center justify-center text-3xl">
+                    📱
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">تواصل فوري بدون انتظار</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      خط ساخن متاح 24/7 يجيب على مكالمتك في أقل من دقيقة. لا قوائم انتظار، لا تحويلات معقدة - تتحدث مباشرة مع فريق الطوارئ المتخصص الذي يفهم عجلتك.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      نوفر أيضاً <Link href="/contact" className="text-red-600 font-semibold hover:underline">واتساب سريع</Link> للحالات التي تفضل إرسال صور أو فيديو لتقييم الوضع قبل وصول الفريق.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-xl flex items-center justify-center text-3xl">
+                    🚗
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">فرق متنقلة جاهزة</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      لدينا فرق طوارئ متنقلة موزعة في جميع أنحاء المدن الرئيسية (<Link href="/saudi/riyadh" className="text-blue-600 font-semibold hover:underline">الرياض</Link>، <Link href="/saudi/jeddah" className="text-blue-600 font-semibold hover:underline">جدة</Link>، <Link href="/saudi/dammam" className="text-blue-600 font-semibold hover:underline">الدمام</Link>). هذا يضمن وصول أسرع - في أقل من 30 دقيقة للحالات الحرجة.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      كل فريق مجهز بكامل المعدات والأدوات اللازمة، لذا لا نحتاج للعودة للمستودع لجلب قطع - كل ما نحتاجه معنا في المركبة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-green-600 text-white rounded-xl flex items-center justify-center text-3xl">
+                    👨‍🔧
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">فنيون متخصصون في الطوارئ</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      ليس كل فني يستطيع التعامل مع الطوارئ. فريقنا مدرب خصيصاً على التشخيص السريع واتخاذ قرارات فورية تحت الضغط. لديهم خبرة واسعة في <Link href="/services/leaks-plumbing" className="text-green-600 font-semibold hover:underline">إصلاح التسربات</Link>، <Link href="/services/electrical" className="text-green-600 font-semibold hover:underline">الأعطال الكهربائية</Link>، و<Link href="/services/ac" className="text-green-600 font-semibold hover:underline">أعطال التكييف</Link> الحرجة.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      كل فني لديه ترخيص معتمد وتأمين ضد الحوادث، لراحة بالك الكاملة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-purple-600 text-white rounded-xl flex items-center justify-center text-3xl">
+                    💡
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">حلول دائمة وليس مؤقتة</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      نحن لا نكتفي بإصلاح مؤقت يعود للعطل بعد أيام. هدفنا حل المشكلة من جذورها. إذا لزم الأمر، نوفر إصلاح مؤقت للطوارئ ثم نعود لإصلاح دائم في وقت لاحق يناسبك.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      نقدم <Link href="/about" className="text-purple-600 font-semibold hover:underline">ضمان مكتوب</Link> على جميع أعمال الطوارئ، لأننا واثقون من جودة عملنا.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Emergency Service Works */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              كيف تعمل خدمة الطوارئ؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              عملية بسيطة وسريعة لحل مشكلتك في أسرع وقت
+            </p>
+
+            <div className="space-y-8">
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">اتصل فوراً</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    اتصل بنا على <a href={`tel:${PHONE}`} className="text-red-600 font-bold hover:underline" dir="ltr">{PHONE}</a> أو عبر <a href={`https://wa.me/${WHATSAPP}?text=طوارئ`} className="text-green-600 font-bold hover:underline">واتساب</a>. أخبرنا بطبيعة الطوارئ وموقعك. كلما كانت المعلومات أدق، كلما استطعنا الوصول أسرع ومستعدين أفضل.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    إذا استطعت، أرسل لنا صورة أو فيديو قصير للمشكلة عبر واتساب - هذا يساعدنا على فهم الوضع وإحضار المعدات المناسبة.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">تقييم فوري للحالة</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    بناءً على وصفك، نقيّم مدى خطورة الحالة ونحدد أولوية الاستجابة. للحالات الحرجة جداً (مثل <Link href="/services/leaks-plumbing" className="text-orange-600 font-semibold hover:underline">انفجار ماسورة</Link> أو <Link href="/services/electrical" className="text-orange-600 font-semibold hover:underline">ماس كهربائي</Link>)، نوجه أقرب فريق متاح فوراً - خلال دقائق من مكالمتك.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    للحالات الأقل حرجة قليلاً، نحدد موعد وصول دقيق (عادة خلال ساعة أو ساعتين) ونرسل لك تأكيد عبر رسالة نصية.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">وصول الفريق المجهز</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    يصل فريقنا في الوقت المحدد (أو أسرع!) مع جميع المعدات اللازمة. نبدأ فوراً بالتشخيص الدقيق للمشكلة. في معظم الحالات، نستطيع تحديد السبب خلال 10-15 دقيقة من الوصول.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    نشرح لك المشكلة بوضوح، والحلول المتاحة، والتكلفة التقريبية. لا نبدأ أي عمل حتى تو افق على الخطة والسعر.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">إصلاح سريع واحترافي</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    نبدأ العمل فوراً بعد موافقتك. هدفنا إيقاف الطارئ وإصلاح المشكلة في أسرع وقت ممكن. بفضل خبرتنا ومعداتنا المتطورة، نستطيع حل معظم الطوارئ في الموقع خلال ساعة إلى ساعتين.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    إذا كانت المشكلة تحتاج قطع غيار غير متوفرة، نوفر حل مؤقت لإيقاف الطارئ، ثم نعود لإكمال الإصلاح النهائي خلال 24-48 ساعة بدون تكلفة إضافية للزيارة.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex-shrink-0 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  5
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">متابعة وضمان</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                    بعد الإصلاح، نختبر العمل للتأكد من أن كل شيء يعمل بشكل مثالي. نقدم لك شهادة ضمان مكتوبة على العمل المنجز. نتواصل معك بعد 24 ساعة للتأكد من عدم وجود مشاكل جديدة.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    إذا ظهرت أي مشكلة خلال فترة الضمان، نعود فوراً ونحلها مجاناً. رقمنا متاح دائماً لأي استفسار أو مشكلة - راجع <Link href="/faqs" className="text-purple-600 font-semibold hover:underline">الأسئلة الشائعة</Link> للمزيد من التفاصيل.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips for Emergencies */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              نصائح هامة للتعامل مع الطوارئ
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              ماذا تفعل في انتظار وصول فريقنا؟
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-red-50 border-r-4 border-red-600 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <span className="text-4xl">💧</span>
+                  عند تسرب المياه
+                </h3>
+                <ul className="space-y-3 text-gray-700 text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 font-bold">1.</span>
+                    <span>أغلق محبس المياه الرئيسي فوراً لإيقاف التسريب</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 font-bold">2.</span>
+                    <span>ابعد الأثاث والأجهزة الكهربائية عن منطقة التسرب</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 font-bold">3.</span>
+                    <span>ضع أوعية لتجميع المياه إن أمكن</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 font-bold">4.</span>
+                    <span>التقط صور وفيديو للمشكلة وأرسلها لنا عبر واتساب</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 font-bold">5.</span>
+                    <span>لا تحاول الإصلاح بنفسك - قد يزيد الوضع سوءاً</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="/services/leaks-plumbing" className="text-red-600 font-bold hover:underline">
+                    المزيد عن خدمات كشف التسربات →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border-r-4 border-yellow-600 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <span className="text-4xl">⚡</span>
+                  عند مشكلة كهربائية
+                </h3>
+                <ul className="space-y-3 text-gray-700 text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-600 font-bold">1.</span>
+                    <span>أطفئ القاطع الرئيسي للكهرباء إذا شممت رائحة حرق</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-600 font-bold">2.</span>
+                    <span>لا تلمس أي أسلاك مكشوفة أو تحاول الإصلاح</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-600 font-bold">3.</span>
+                    <span>إذا كان هناك ماء بالقرب من الكهرباء، لا تقترب نهائياً</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-600 font-bold">4.</span>
+                    <span>افصل الأجهزة الكهربائية الهامة من المقابس</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-600 font-bold">5.</span>
+                    <span>انتظر فريقنا في مكان آمن</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="/services/electrical" className="text-yellow-600 font-bold hover:underline">
+                    المزيد عن خدمات الكهرباء →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 border-r-4 border-blue-600 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <span className="text-4xl">❄️</span>
+                  عند عطل التكييف
+                </h3>
+                <ul className="space-y-3 text-gray-700 text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-600 font-bold">1.</span>
+                    <span>أطفئ المكيف فوراً إذا سمعت صوت غريب أو شممت رائحة</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-600 font-bold">2.</span>
+                    <span>افتح النوافذ لتهوية المكان</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-600 font-bold">3.</span>
+                    <span>في حر الصيف الشديد، انتقل لغرفة أخرى أو مكان مكيف</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-600 font-bold">4.</span>
+                    <span>لا تحاول فك أو إصلاح المكيف بنفسك</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-600 font-bold">5.</span>
+                    <span>تأكد من إمكانية وصول الفني للمكيف بسهولة</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="/services/ac" className="text-blue-600 font-bold hover:underline">
+                    المزيد عن خدمات التكييف →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 border-r-4 border-purple-600 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                  <span className="text-4xl">🐛</span>
+                  عند غزو حشرات خطيرة
+                </h3>
+                <ul className="space-y-3 text-gray-700 text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple-600 font-bold">1.</span>
+                    <span>ابتعد فوراً عن المنطقة خاصة للنحل والدبابير</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple-600 font-bold">2.</span>
+                    <span>أغلق الأبواب والنوافذ لمنع دخول المزيد</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple-600 font-bold">3.</span>
+                    <span>لا تحاول رش المبيدات بنفسك - قد يزيد العدوانية</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple-600 font-bold">4.</span>
+                    <span>أبعد الأطفال والحيوانات الأليفة تماماً</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple-600 font-bold">5.</span>
+                    <span>إذا تعرض أحد للدغة، اطلب عناية طبية فوراً</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="/services/pest-control" className="text-purple-600 font-bold hover:underline">
+                    المزيد عن خدمات مكافحة الحشرات →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Emergency */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              أسئلة شائعة عن خدمة الطوارئ
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              إجابات على أكثر الأسئلة شيوعاً
+            </p>
+
+            <div className="space-y-4">
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-red-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    كم تستغرق الاستجابة للطوارئ؟
+                  </h3>
+                  <svg className="w-6 h-6 text-red-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    في المدن الرئيسية (<Link href="/saudi/riyadh" className="text-red-600 font-semibold hover:underline">الرياض</Link>، <Link href="/saudi/jeddah" className="text-red-600 font-semibold hover:underline">جدة</Link>، <Link href="/saudi/dammam" className="text-red-600 font-semibold hover:underline">الدمام</Link>)، نصل خلال 30-60 دقيقة للحالات الحرجة. في المدن الأخرى، قد يستغرق الوصول ساعة إلى ساعتين حسب البعد عن قاعدتنا. نبذل قصارى جهدنا دائماً للوصول في أسرع وقت ممكن.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-red-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    هل الأسعار أعلى للطوارئ؟
+                  </h3>
+                  <svg className="w-6 h-6 text-red-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    خدمة الطوارئ في ساعات العمل العادية بنفس <Link href="/pricing" className="text-red-600 font-semibold hover:underline">الأسعار العادية</Link>. قد تطبق رسوم إضافية بسيطة (15-25%) للخدمة الليلية (بعد 10 مساءً) وأيام العطل والأعياد، لتغطية تكاليف توفر الفريق 24/7. نخبرك بالسعر الكامل قبل البدء بالعمل - لا مفاجآت.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-red-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    ماذا لو لم تستطيعوا الإصلاح فوراً؟
+                  </h3>
+                  <svg className="w-6 h-6 text-red-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    في حالات نادرة جداً، قد تحتاج المشكلة قطع غيار غير متوفرة لدينا فوراً. في هذه الحالة، نوفر <strong>حل مؤقت</strong> لإيقاف الطارئ (مثل إيقاف التسرب أو توفير كهرباء مؤقتة)، ثم نعود خلال 24-48 ساعة لإكمال الإصلاح النهائي بدون تكلفة إضافية للزيارة الثانية. راحتك وسلامتك أولويتنا.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-red-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    هل توفرون ضمان على أعمال الطوارئ؟
+                  </h3>
+                  <svg className="w-6 h-6 text-red-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    نعم! جميع أعمال الطوارئ مغطاة <Link href="/about" className="text-red-600 font-semibold hover:underline">بضمان مكتوب</Link> مثل أي خدمة عادية. مدة الضمان تختلف حسب نوع العمل (عادة 3-12 شهر). إذا حدثت أي مشكلة خلال فترة الضمان، نعود ونحلها مجاناً وفوراً. نحن ملتزمون بجودة عملنا سواء كان طوارئ أو عادي.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link href="/faqs" className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors font-bold text-lg shadow-lg">
+                <span>المزيد من الأسئلة والأجوبة</span>
+                <span>←</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-br from-red-600 to-red-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-red-600 to-red-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div className="text-6xl mb-6">🚨</div>
-          <h2 className="text-5xl font-bold mb-4">
-            لديك حالة طوارئ؟
-          </h2>
-          <p className="text-3xl text-red-100 mb-8">
-            اتصل الآن ونحن في الطريق إليك
-          </p>
-          <a
-            href={`tel:${PHONE}`}
-            className="inline-block px-16 py-6 bg-white text-red-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-3xl shadow-2xl transform hover:scale-105 animate-pulse"
-          >
-            📞 {PHONE}
-          </a>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-7xl mb-6 animate-bounce">🚨</div>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              لديك حالة طوارئ؟
+            </h2>
+            <p className="text-3xl text-red-100 mb-10">
+              اتصل الآن ونحن في الطريق إليك
+            </p>
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-block px-16 py-6 bg-white text-red-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-3xl shadow-2xl transform hover:scale-105 animate-pulse mb-8"
+            >
+              📞 {PHONE}
+            </a>
+            <div className="flex flex-wrap items-center justify-center gap-8 text-red-100 text-lg">
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">✅</span>
+                <span>متاحون 24/7</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">⚡</span>
+                <span>وصول خلال 30 دقيقة</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">🏆</span>
+                <span>فريق محترف</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

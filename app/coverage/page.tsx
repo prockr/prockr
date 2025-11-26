@@ -491,34 +491,468 @@ export default function CoveragePage() {
         </div>
       </section>
 
+      {/* Detailed Coverage Info */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              تفاصيل تغطيتنا في كل منطقة
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              معلومات شاملة عن خدماتنا في جميع مناطق المملكة
+            </p>
+
+            <div className="space-y-12">
+              {/* Riyadh Region Detailed */}
+              <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-20 h-20 bg-primary-600 text-white rounded-xl flex items-center justify-center text-4xl">
+                    🏛️
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">منطقة الرياض</h3>
+                    <p className="text-xl text-gray-700">
+                      العاصمة والمدن المحيطة بها - تغطية استثنائية 24/7
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">المدن المغطاة:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">✓</span>
+                        <Link href="/saudi/riyadh" className="hover:text-primary-600 hover:underline font-semibold">الرياض (جميع الأحياء)</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">✓</span>
+                        <span>الخرج والمزاحمية</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">✓</span>
+                        <span>الدرعية والدوادمي</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">✓</span>
+                        <span>المجمعة وشقراء</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">✓</span>
+                        <span>عفيف والقويعية</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">الخدمات الأكثر طلباً:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">•</span>
+                        <Link href="/services/moving" className="hover:text-primary-600 hover:underline">نقل العفش والأثاث</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">•</span>
+                        <Link href="/services/cleaning" className="hover:text-primary-600 hover:underline">التنظيف العميق</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">•</span>
+                        <Link href="/services/ac" className="hover:text-primary-600 hover:underline">صيانة التكييف</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">•</span>
+                        <Link href="/services/leaks-plumbing" className="hover:text-primary-600 hover:underline">كشف التسربات</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-primary-600">•</span>
+                        <Link href="/services/pest-control" className="hover:text-primary-600 hover:underline">مكافحة الحشرات</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Makkah Region Detailed */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-20 h-20 bg-green-600 text-white rounded-xl flex items-center justify-center text-4xl">
+                    🕋
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">منطقة مكة المكرمة</h3>
+                    <p className="text-xl text-gray-700">
+                      المنطقة الغربية - خدمات متميزة في المدن المقدسة
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">المدن المغطاة:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">✓</span>
+                        <Link href="/saudi/makkah" className="hover:text-green-600 hover:underline font-semibold">مكة المكرمة</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">✓</span>
+                        <Link href="/saudi/jeddah" className="hover:text-green-600 hover:underline font-semibold">جدة (عروس البحر)</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">✓</span>
+                        <span>الطائف ورابغ</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">✓</span>
+                        <span>القنفذة والليث</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">✓</span>
+                        <span>خليص والجموم</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">مميزات خاصة:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">•</span>
+                        <span>خدمات موسم الحج والعمرة</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">•</span>
+                        <span>فرق متخصصة للفنادق</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">•</span>
+                        <span>استجابة سريعة في جدة</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">•</span>
+                        <span>خبرة في المباني الشاهقة</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-green-600">•</span>
+                        <Link href="/emergency" className="hover:text-green-600 hover:underline">طوارئ 24/7</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eastern Region Detailed */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-20 h-20 bg-blue-600 text-white rounded-xl flex items-center justify-center text-4xl">
+                    🏝️
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">المنطقة الشرقية</h3>
+                    <p className="text-xl text-gray-700">
+                      المنطقة الصناعية - خدمات شاملة للمنشآت والمنازل
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">المدن المغطاة:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">✓</span>
+                        <Link href="/saudi/dammam" className="hover:text-blue-600 hover:underline font-semibold">الدمام والخبر والظهران</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>القطيف وصفوى</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>الجبيل والأحساء</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>حفر الباطن وبقيق</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>النعيرية ورأس تنورة</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">خدمات متخصصة:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span>صيانة للمنشآت الصناعية</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span>خدمات الشركات والمكاتب</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span>عقود صيانة سنوية</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">•</span>
+                        <span>فرق كبيرة للمشاريع</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-blue-600">•</span>
+                        <Link href="/pricing" className="hover:text-blue-600 hover:underline">أسعار تنافسية</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Guarantee Across All Cities */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              ضماناتنا في جميع المدن
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              نفس مستوى الجودة والاحترافية أينما كنت
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+                  ✅
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">نفس معايير الجودة</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  سواء كنت في <Link href="/saudi/riyadh" className="text-primary-600 font-semibold hover:underline">الرياض</Link> أو في مدينة صغيرة، ستحصل على نفس الاحترافية والجودة. لدينا بروتوكولات موحدة لضمان الجودة في جميع المواقع.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+                  🛡️
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">ضمان مكتوب موحد</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  <Link href="/about" className="text-primary-600 font-semibold hover:underline">الضمان</Link> الذي نقدمه في الرياض هو نفسه في أي مدينة أخرى. لا تمييز ولا اختلاف - كل عميل يحصل على نفس الحقوق والضمانات بغض النظر عن موقعه.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+                  👥
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">دعم عملاء موحد</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  فريق <Link href="/contact" className="text-primary-600 font-semibold hover:underline">خدمة العملاء</Link> لدينا متاح لجميع العملاء بنفس المستوى. رقم واحد، نظام واحد، خدمة موحدة - لا فرق بين مدينة وأخرى.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Choose Partners */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              كيف نختار شركاءنا في كل مدينة؟
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              معايير صارمة لضمان الجودة أينما كنت
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-6 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-8">
+                <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">فحص دقيق للشهادات والتراخيص</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    لا نقبل أي مقدم خدمة بدون التأكد من امتلاكه للشهادات المهنية المطلوبة والتراخيص الحكومية اللازمة. كل شريك يمر بعملية فحص صارمة تشمل التحقق من الخبرة والمؤهلات.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8">
+                <div className="flex-shrink-0 w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">تدريب على معاييرنا</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    حتى الفنيون ذوو الخبرة يخضعون لتدريب على بروتوكولاتنا الخاصة وطرق عملنا ومعايير خدمة العملاء لدينا. نريد أن يمثل كل فني قيمنا وجودتنا بغض النظر عن المدينة.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8">
+                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">مراقبة جودة مستمرة</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    لا ننتهي بعد التوظيف. لدينا نظام مراقبة جودة يتابع كل خدمة ويقيّم الأداء. نجمع آراء العملاء باستمرار ونتخذ إجراءات فورية إذا انخفض مستوى أي شريك عن معاييرنا.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
+                <div className="flex-shrink-0 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">تحديث مستمر للكفاءات</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    نوفر دورات تدريبية دورية لجميع شركائنا على أحدث التقنيات والمعدات. هذا يضمن أن فريقنا في كل مدينة على اطلاع دائم بأفضل الممارسات والحلول الحديثة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Coverage */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
+              أسئلة شائعة عن التغطية
+            </h2>
+            <p className="text-xl text-gray-600 text-center mb-12">
+              إجابات على أكثر الأسئلة شيوعاً
+            </p>
+
+            <div className="space-y-4">
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-primary-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    كيف أعرف أن مدينتي مغطاة؟
+                  </h3>
+                  <svg className="w-6 h-6 text-primary-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    انتقل إلى <Link href="/saudi" className="text-primary-600 font-semibold hover:underline">صفحة المدن</Link> وابحث عن مدينتك في القائمة. إذا لم تجدها مدرجة، <Link href="/contact" className="text-primary-600 font-semibold hover:underline">اتصل بنا</Link> مباشرة - قد نكون نخدم مدينتك حتى لو لم تكن مدرجة بشكل رسمي بعد. نحن نتوسع باستمرار ونضيف مدن جديدة كل شهر.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-primary-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    هل جميع الخدمات متاحة في كل مدينة؟
+                  </h3>
+                  <svg className="w-6 h-6 text-primary-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    في المدن الرئيسية، جميع <Link href="/services" className="text-primary-600 font-semibold hover:underline">خدماتنا الـ14</Link> متاحة بالكامل. في المدن الأصغر، معظم الخدمات متاحة لكن قد تكون بعض الخدمات المتخصصة جداً تحتاج طلب مسبق. عند اختيار مدينتك على الموقع، سترى الخدمات المتاحة فوراً. يمكنك دائماً الاتصال بنا للتأكد من توفر خدمة معينة في منطقتك.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-primary-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    ماذا لو كنت في منطقة نائية؟
+                  </h3>
+                  <svg className="w-6 h-6 text-primary-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    لا تتردد في <Link href="/contact" className="text-primary-600 font-semibold hover:underline">الاتصال بنا</Link>! في كثير من الحالات، نستطيع الوصول إلى المناطق النائية من خلال شبكتنا الواسعة من الشركاء المحليين. قد يكون هناك وقت إضافي للوصول أو رسوم نقل بسيطة للمسافات البعيدة، لكننا نبذل قصارى جهدنا لخدمتك أينما كنت. هدفنا تغطية 100% من المملكة خلال السنوات القادمة.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-white rounded-xl border-2 border-gray-200 hover:border-primary-500 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1 pl-4">
+                    هل تخططون لإضافة مدن جديدة؟
+                  </h3>
+                  <svg className="w-6 h-6 text-primary-600 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    بالتأكيد! نعمل باستمرار على التوسع. نضيف 2-3 مدن جديدة كل شهر. إذا كانت مدينتك غير متوفرة، أخبرنا عن اهتمامك - هذا يساعدنا على تحديد أولويات التوسع. يمكنك متابعة صفحة <Link href="/about" className="text-primary-600 font-semibold hover:underline">من نحن</Link> لمعرفة آخر التحديثات عن المدن الجديدة. هدفنا الوصول إلى 100+ مدينة خلال عامين.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link href="/faqs" className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-colors font-bold text-lg shadow-lg">
+                <span>المزيد من الأسئلة والأجوبة</span>
+                <span>←</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            ابحث عن خدمتك في مدينتك
-          </h2>
-          <p className="text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            اختر مدينتك الآن واكتشف جميع الخدمات المتاحة لك
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/saudi"
-              className="px-10 py-5 bg-white text-primary-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              اختر مدينتك
-            </Link>
-            <Link
-              href="/services"
-              className="px-10 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              تصفح الخدمات
-            </Link>
-            <Link
-              href="/contact"
-              className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
-            >
-              اتصل بنا
-            </Link>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-7xl mb-6">🗺️</div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              ابحث عن خدمتك في مدينتك
+            </h2>
+            <p className="text-2xl text-primary-100 mb-10 leading-relaxed">
+              اختر مدينتك الآن واكتشف جميع الخدمات المتاحة لك. نحن هنا لخدمتك في كل مكان!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href="/saudi"
+                className="px-12 py-5 bg-white text-primary-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                اختر مدينتك
+              </Link>
+              <Link
+                href="/services"
+                className="px-12 py-5 bg-yellow-400 text-gray-900 rounded-xl hover:bg-yellow-300 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                تصفح الخدمات
+              </Link>
+              <Link
+                href="/contact"
+                className="px-12 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
+              >
+                اتصل بنا
+              </Link>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-8 text-primary-100 text-lg">
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">✅</span>
+                <span>45+ مدينة</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">⚡</span>
+                <span>نفس الجودة</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-3xl">🏆</span>
+                <span>ضمان موحد</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
