@@ -10,6 +10,7 @@ import { TrustBadges } from '@/components/TrustBadges';
 import { RichContentSections } from '@/components/RichContentSections';
 import { generateGeneralSubserviceContent } from '@/lib/rich-content';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 import type { Metadata } from 'next';
 
 export const revalidate = REVALIDATE_DEFAULT;
@@ -78,24 +79,24 @@ export default function SubserviceHubPage({ params }: PageProps) {
     { label: subservice.name_ar, href: `/services/${service.slug}/${subservice.slug}` },
   ];
 
-  // Get service-specific image
+  // Get service-specific image with cache busting
   const getServiceImage = (serviceSlug: string, subserviceSlug: string): string => {
     // Try to find specific image for subservice
     const imageMap: Record<string, string> = {
-      'moving-apartment-moving': '/images/moving/apartment-movers.jpg',
-      'moving-villa-moving': '/images/moving/villa-moving-service.jpg',
-      'moving-office-moving': '/images/moving/office-moving-services.jpg',
-      'moving-furniture-packing': '/images/moving/furniture-packing-service.jpg',
-      'cleaning-deep-cleaning': '/images/cleaning/deep-cleaning-Jeddah.jpg',
-      'cleaning-hourly-cleaning': '/images/cleaning/hourly-maid-service.jpg',
-      'cleaning-tank-cleaning': '/images/cleaning/water-tank-cleaning-Saudi-Arabia.jpg',
-      'pest-control-general-spray': '/images/pest-control/pest-control-Saudi-Arabia.jpg',
-      'leaks-plumbing-thermal-leak-detection': '/images/leaks-plumbing/water-leak-detection-Riyadh.jpg',
-      'ac-split-ac-cleaning': '/images/cleaning/AC-cleaning-and-maintenance.jpg',
+      'moving-apartment-moving': `/images/moving/apartment-movers.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'moving-villa-moving': `/images/moving/villa-moving-service.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'moving-office-moving': `/images/moving/office-moving-services.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'moving-furniture-packing': `/images/moving/furniture-packing-service.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'cleaning-deep-cleaning': `/images/cleaning/deep-cleaning-Jeddah.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'cleaning-hourly-cleaning': `/images/cleaning/hourly-maid-service.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'cleaning-tank-cleaning': `/images/cleaning/water-tank-cleaning-Saudi-Arabia.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'pest-control-general-spray': `/images/pest-control/pest-control-Saudi-Arabia.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'leaks-plumbing-thermal-leak-detection': `/images/leaks-plumbing/water-leak-detection-Riyadh.jpg?v=${IMAGE_CACHE_VERSION}`,
+      'ac-split-ac-cleaning': `/images/cleaning/AC-cleaning-and-maintenance.jpg?v=${IMAGE_CACHE_VERSION}`,
     };
 
     const key = `${serviceSlug}-${subserviceSlug}`;
-    return imageMap[key] || '/images/cleaning/professional-cleaning-company.jpg';
+    return imageMap[key] || `/images/cleaning/professional-cleaning-company.jpg?v=${IMAGE_CACHE_VERSION}`;
   };
 
   // FAQs for subservice

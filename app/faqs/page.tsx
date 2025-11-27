@@ -5,6 +5,7 @@ import { getTier1Cities } from '@/data/cities';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { faqPath } from '@/lib/urls';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -105,7 +106,7 @@ export default function FAQsHubPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/ac/Air-conditioner-repair.jpg"
+                  src={`/images/ac/Air-conditioner-repair.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="الأسئلة الشائعة"
                   fill
                   className="object-cover"

@@ -4,6 +4,7 @@ import { SERVICES } from '@/data/services';
 import { ServiceCard } from '@/components/ServiceCard';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -82,7 +83,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-[200px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/moving/furniture-moving-company.jpg"
+                  src={`/images/moving/furniture-moving-company.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="نقل عفش"
                   fill
                   className="object-cover"
@@ -98,7 +99,7 @@ export default function ServicesPage() {
 
               <div className="relative h-[200px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/cleaning/deep-cleaning-Jeddah.jpg"
+                  src={`/images/cleaning/deep-cleaning-Jeddah.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="تنظيف"
                   fill
                   className="object-cover"
@@ -114,7 +115,7 @@ export default function ServicesPage() {
 
               <div className="relative h-[200px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/ac/AC-maintenance.jpg"
+                  src={`/images/ac/AC-maintenance.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="تكييف"
                   fill
                   className="object-cover"
@@ -130,7 +131,7 @@ export default function ServicesPage() {
 
               <div className="relative h-[200px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/leaks-plumbing/water-leak-detection-Riyadh.jpg"
+                  src={`/images/leaks-plumbing/water-leak-detection-Riyadh.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="كشف تسربات"
                   fill
                   className="object-cover"

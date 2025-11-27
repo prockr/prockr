@@ -5,6 +5,7 @@ import { getTier1Cities } from '@/data/cities';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { pricingPath, getServiceImage } from '@/lib/urls';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -82,7 +83,7 @@ export default function PricingHubPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/moving/villa-moving-service.jpg"
+                  src={`/images/moving/villa-moving-service.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="أسعار الخدمات المنزلية"
                   fill
                   className="object-cover"

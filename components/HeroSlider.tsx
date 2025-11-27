@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 interface Slide {
   image: string;
@@ -9,75 +10,75 @@ interface Slide {
   subtitle: string;
 }
 
-// Updated slides with new images from all service categories
+// Updated slides with new images from all service categories - with cache busting
 const slides: Slide[] = [
   {
-    image: '/images/moving/professional-moving-team.jpg',
+    image: `/images/moving/professional-moving-team.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'نقل عفش احترافي',
     subtitle: 'فريق متخصص • تغليف آمن • نقل سريع',
   },
   {
-    image: '/images/cleaning/professional-cleaning-company.jpg',
+    image: `/images/cleaning/professional-cleaning-company.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'تنظيف منزلي شامل',
     subtitle: 'تنظيف عميق • معقمات آمنة • نتائج مضمونة',
   },
   {
-    image: '/images/ac/HVAC-services.jpg',
+    image: `/images/ac/HVAC-services.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'صيانة مكيفات',
     subtitle: 'فنيون خبراء • قطع أصلية • ضمان معتمد',
   },
   {
-    image: '/images/leaks-plumbing/thermal-leak-inspection-Riyadh.jpg',
+    image: `/images/leaks-plumbing/thermal-leak-inspection-Riyadh.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'كشف تسربات المياه',
     subtitle: 'أحدث الأجهزة • دقة عالية • حلول فورية',
   },
   {
-    image: '/images/pest-control/professional-pest-exterminators.jpg',
+    image: `/images/pest-control/professional-pest-exterminators.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'مكافحة حشرات',
     subtitle: 'مواد آمنة • فعالية طويلة • صحة عائلتك',
   },
   {
-    image: '/images/electricity/electrical-maintenance-company.jpg',
+    image: `/images/electricity/electrical-maintenance-company.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'خدمات كهرباء',
     subtitle: 'كهربائيون معتمدون • أمان تام • خدمة 24/7',
   },
   {
-    image: '/images/flooring/Flooring Installation Saudi Arabia.jpg',
+    image: `/images/flooring/Flooring Installation Saudi Arabia.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'تركيب أرضيات',
     subtitle: 'سيراميك • باركيه • رخام • فينيل',
   },
   {
-    image: '/images/painting-gypsum/Professional-painters-KSA.jpg',
+    image: `/images/painting-gypsum/Professional-painters-KSA.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'دهانات وجبس',
     subtitle: 'دهانات داخلية وخارجية • جبس بورد • ديكورات',
   },
   {
-    image: '/images/aluminum-glass/Aluminum Windows.jpg',
+    image: `/images/aluminum-glass/Aluminum Windows.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'ألمنيوم وزجاج',
     subtitle: 'نوافذ • أبواب • واجهات زجاجية',
   },
   {
-    image: '/images/landscaping/landscape design.jpg',
+    image: `/images/landscaping/landscape design.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'تنسيق حدائق',
     subtitle: 'تصميم احترافي • نباتات متنوعة • أنظمة ري',
   },
   {
-    image: '/images/carpentry/Custom furniture.jpg',
+    image: `/images/carpentry/Custom furniture.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'نجارة وأثاث',
     subtitle: 'تصنيع مطابخ • غرف نوم • أثاث مخصص',
   },
   {
-    image: '/images/insulation-roofs/Roof waterproofing Saudi Arabia.jpg',
+    image: `/images/insulation-roofs/Roof waterproofing Saudi Arabia.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'عزل أسطح',
     subtitle: 'عزل مائي • عزل حراري • حماية شاملة',
   },
   {
-    image: '/images/appliances/Home appliance repair.jpg',
+    image: `/images/appliances/Home appliance repair.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'صيانة أجهزة منزلية',
     subtitle: 'غسالات • ثلاجات • أفران • مجففات',
   },
   {
-    image: '/images/car-towing/Car towing service.jpg',
+    image: `/images/car-towing/Car towing service.jpg?v=${IMAGE_CACHE_VERSION}`,
     title: 'سطحة ونقل سيارات',
     subtitle: 'نقل آمن • خدمة 24/7 • تغطية جميع المدن',
   },

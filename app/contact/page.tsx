@@ -2,6 +2,7 @@ import { generateMetadata as genMetadata } from '@/lib/seo';
 import { PHONE, WHATSAPP, REVALIDATE_DEFAULT } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -68,7 +69,7 @@ export default function ContactPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/pest-control/pest-control-Saudi-Arabia.jpg"
+                  src={`/images/pest-control/pest-control-Saudi-Arabia.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="اتصل بنا"
                   fill
                   className="object-cover"

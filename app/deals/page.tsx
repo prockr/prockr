@@ -5,6 +5,7 @@ import { generateMetadata as genMetadata } from '@/lib/seo';
 import { dealsPath, getServiceImage } from '@/lib/urls';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
 import Image from 'next/image';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -75,7 +76,7 @@ export default function DealsHubPage() {
             <div className="order-1 lg:order-2">
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/cleaning/deep-cleaning-Jeddah.jpg"
+                  src={`/images/cleaning/deep-cleaning-Jeddah.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="عروض وخصومات الخدمات المنزلية"
                   fill
                   className="object-cover"

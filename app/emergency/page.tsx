@@ -5,6 +5,7 @@ import { getTier1Cities } from '@/data/cities';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { emergencyPath, getServiceImage } from '@/lib/urls';
 import { PHONE, WHATSAPP, REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -87,7 +88,7 @@ export default function EmergencyHubPage() {
             <div className="order-1 lg:order-2">
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/leaks-plumbing/emergency-plumbing-Jeddah.jpg"
+                  src={`/images/leaks-plumbing/emergency-plumbing-Jeddah.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="خدمة طوارئ 24/7"
                   fill
                   className="object-cover"

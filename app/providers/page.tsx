@@ -2,6 +2,7 @@ import { generateMetadata as genMetadata } from '@/lib/seo';
 import { REVALIDATE_DEFAULT, PHONE, WHATSAPP } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -82,7 +83,7 @@ export default function ProvidersPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/cleaning/professional-cleaning-company.jpg"
+                  src={`/images/cleaning/professional-cleaning-company.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="انضم إلى شبكة بروكر"
                   fill
                   className="object-cover"

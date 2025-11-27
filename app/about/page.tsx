@@ -2,6 +2,7 @@ import { generateMetadata as genMetadata } from '@/lib/seo';
 import { PHONE, REVALIDATE_DEFAULT } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -18,7 +19,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/images/cleaning/home-cleaning-Riyadh.jpg')] bg-cover bg-center" />
+          <div className={`absolute inset-0 bg-[url('/images/cleaning/home-cleaning-Riyadh.jpg?v=${IMAGE_CACHE_VERSION}')] bg-cover bg-center`} />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -59,7 +60,7 @@ export default function AboutPage() {
             <div>
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/cleaning/professional-cleaning-company.jpg"
+                  src={`/images/cleaning/professional-cleaning-company.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="من نحن - بروكر"
                   fill
                   className="object-cover"

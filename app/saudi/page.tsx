@@ -4,6 +4,7 @@ import { CITIES, getTier1Cities } from '@/data/cities';
 import { cityPath } from '@/lib/urls';
 import { generateMetadata as genMetadata } from '@/lib/seo';
 import { REVALIDATE_DEFAULT } from '@/lib/constants';
+import { IMAGE_CACHE_VERSION } from '@/lib/images';
 
 export const revalidate = REVALIDATE_DEFAULT;
 
@@ -87,7 +88,7 @@ export default function SaudiHubPage() {
               {/* Riyadh */}
               <div className="relative h-[220px] rounded-xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/cleaning/home-cleaning-Riyadh.jpg"
+                  src={`/images/cleaning/home-cleaning-Riyadh.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="الرياض"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -104,7 +105,7 @@ export default function SaudiHubPage() {
               {/* Jeddah */}
               <div className="relative h-[220px] rounded-xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/cleaning/deep-cleaning-Jeddah.jpg"
+                  src={`/images/cleaning/deep-cleaning-Jeddah.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="جدة"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -121,7 +122,7 @@ export default function SaudiHubPage() {
               {/* Dammam */}
               <div className="relative h-[220px] rounded-xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/cleaning/cleaning-services-Dammam.jpg"
+                  src={`/images/cleaning/cleaning-services-Dammam.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="الدمام"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -138,7 +139,7 @@ export default function SaudiHubPage() {
               {/* Makkah */}
               <div className="relative h-[220px] rounded-xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/moving/moving-service-in-Makkah.jpg"
+                  src={`/images/moving/moving-service-in-Makkah.jpg?v=${IMAGE_CACHE_VERSION}`}
                   alt="مكة المكرمة"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
