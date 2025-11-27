@@ -6,20 +6,26 @@ const nextConfig = {
     defaultLocale: 'ar',
   },
   images: {
+    // Priority: AVIF (best compression) → WebP → JPEG
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year cache
+    // Optimized device sizes for Saudi mobile users (70%+ mobile)
+    deviceSizes: [375, 640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    // 1 year cache for immutable images
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
     remotePatterns: [],
-    // Optimizations for better performance
     loader: 'default',
     path: '/_next/image',
     domains: [],
   },
+  // Enable SWC minification for faster builds
+  swcMinify: true,
+  // PoweredByHeader removal for smaller response
+  poweredByHeader: false,
   // Compression
   compress: true,
   // ISR default
