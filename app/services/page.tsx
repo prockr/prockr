@@ -164,13 +164,11 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => (
               <div key={service.slug} id={service.slug} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <Link href={`/services/${service.slug}`} className="block">
-                  <ServiceCard
-                    service={service}
-                    citySlug="riyadh"
-                    href={`/services/${service.slug}`}
-                  />
-                </Link>
+                <ServiceCard
+                  service={service}
+                  citySlug="riyadh"
+                  href={`/services/${service.slug}`}
+                />
                 <div className="p-6 bg-gray-50 border-t">
                   <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="text-primary-600">✓</span>

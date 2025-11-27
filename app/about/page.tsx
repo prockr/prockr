@@ -561,55 +561,65 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/services/moving" className="group bg-gradient-to-br from-blue-50 to-primary-50 rounded-xl p-6 hover:shadow-xl transition-all">
+              <div className="group bg-gradient-to-br from-blue-50 to-primary-50 rounded-xl p-6 hover:shadow-xl transition-all">
                 <div className="text-5xl mb-4">🚚</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600">نقل العفش</h3>
+                <Link href="/services/moving">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 hover:underline">نقل العفش</h3>
+                </Link>
                 <p className="text-gray-700 text-sm mb-3">خدمة نقل احترافية مع التغليف والفك والتركيب في جميع مدن المملكة</p>
                 <div className="flex flex-wrap gap-2">
                   <Link href="/deals/moving/riyadh" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
                   <Link href="/pricing/moving/riyadh" className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200">أسعار</Link>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/services/cleaning" className="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-xl transition-all">
+              <div className="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-xl transition-all">
                 <div className="text-5xl mb-4">✨</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600">التنظيف</h3>
+                <Link href="/services/cleaning">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 hover:underline">التنظيف</h3>
+                </Link>
                 <p className="text-gray-700 text-sm mb-3">تنظيف شامل ومتخصص للمنازل والفلل والمكاتب مع مواد آمنة</p>
                 <div className="flex flex-wrap gap-2">
                   <Link href="/deals/cleaning/jeddah" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
                   <Link href="/faq/cleaning/riyadh" className="text-xs px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">أسئلة</Link>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/services/ac" className="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 hover:shadow-xl transition-all">
+              <div className="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 hover:shadow-xl transition-all">
                 <div className="text-5xl mb-4">❄️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-cyan-600">صيانة المكيفات</h3>
+                <Link href="/services/ac">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-cyan-600 hover:underline">صيانة المكيفات</h3>
+                </Link>
                 <p className="text-gray-700 text-sm mb-3">صيانة وإصلاح جميع أنواع المكيفات بأسعار تنافسية</p>
                 <div className="flex flex-wrap gap-2">
                   <Link href="/deals/ac/riyadh" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
                   <Link href="/emergency/ac/riyadh" className="text-xs px-3 py-1 bg-red-800 text-white rounded-full hover:bg-red-900">طوارئ</Link>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/services/leaks-plumbing" className="group bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition-all">
+              <div className="group bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition-all">
                 <div className="text-5xl mb-4">💧</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600">كشف التسربات</h3>
+                <Link href="/services/leaks-plumbing">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 hover:underline">كشف التسربات</h3>
+                </Link>
                 <p className="text-gray-700 text-sm mb-3">كشف تسربات المياه بأحدث الأجهزة الإلكترونية بدون تكسير</p>
                 <div className="flex flex-wrap gap-2">
                   <Link href="/pricing/leaks-plumbing/riyadh" className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200">أسعار</Link>
                   <Link href="/emergency/leaks-plumbing/dammam" className="text-xs px-3 py-1 bg-red-800 text-white rounded-full hover:bg-red-900">طوارئ</Link>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/services/pest-control" className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:shadow-xl transition-all">
+              <div className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:shadow-xl transition-all">
                 <div className="text-5xl mb-4">🐜</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600">مكافحة الحشرات</h3>
+                <Link href="/services/pest-control">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 hover:underline">مكافحة الحشرات</h3>
+                </Link>
                 <p className="text-gray-700 text-sm mb-3">مكافحة شاملة لجميع أنواع الحشرات بمواد آمنة ومعتمدة</p>
                 <div className="flex flex-wrap gap-2">
                   <Link href="/deals/pest-control/jeddah" className="text-xs px-3 py-1 bg-red-100 text-red-700 rounded-full hover:bg-red-200">عروض</Link>
                   <Link href="/faq/pest-control/riyadh" className="text-xs px-3 py-1 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200">أسئلة</Link>
                 </div>
-              </Link>
+              </div>
 
               <Link href="/services" className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 hover:shadow-xl transition-all flex items-center justify-center">
                 <div className="text-center">
