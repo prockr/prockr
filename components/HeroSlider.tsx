@@ -76,6 +76,11 @@ const slides: Slide[] = [
     title: 'صيانة أجهزة منزلية',
     subtitle: 'غسالات • ثلاجات • أفران • مجففات',
   },
+  {
+    image: '/images/car-towing/Car towing service.jpg',
+    title: 'سطحة ونقل سيارات',
+    subtitle: 'نقل آمن • خدمة 24/7 • تغطية جميع المدن',
+  },
 ];
 
 export function HeroSlider() {

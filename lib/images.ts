@@ -1064,35 +1064,42 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
   },
 
   // ====================================
-  // Car Towing / سطحة ونقل سيارات
+  // Car Towing / سطحة ونقل سيارات - 9 صور
   // ====================================
   'car-towing': {
     hero: [
-      '/images/moving/furniture-transport-Saudi-Arabia.jpg',
-      '/images/moving/intercity-moving-Saudi-Arabia.jpg',
-      '/images/moving/long-distance-movers.jpg',
+      '/images/car-towing/Car towing service.jpg',
+      '/images/car-towing/Car transport services.jpg',
+      '/images/car-towing/Auto transport company.jpg',
+      '/images/car-towing/Vehicle shipping Saudi Arabia.jpg',
     ],
     gallery: [
-      '/images/moving/moving-truck-rental.jpg',
-      '/images/moving/heavy-furniture-movers.jpg',
+      '/images/car-towing/Car carrier service.jpg',
+      '/images/car-towing/Door-to-door car delivery.jpg',
+      '/images/car-towing/Long-distance car transport.jpg',
+      '/images/car-towing/Vehicle recovery.jpg',
+      '/images/car-towing/Car relocation services.jpg',
     ],
   },
   'city-towing': {
     hero: [
-      '/images/moving/same-day-movers.jpg',
-      '/images/moving/moving-service-24-hours.jpg',
+      '/images/car-towing/Car towing service.jpg',
+      '/images/car-towing/Vehicle recovery.jpg',
+      '/images/car-towing/Car carrier service.jpg',
     ],
   },
   'intercity-towing': {
     hero: [
-      '/images/moving/long-distance-movers.jpg',
-      '/images/moving/intercity-moving-Saudi-Arabia.jpg',
+      '/images/car-towing/Long-distance car transport.jpg',
+      '/images/car-towing/Vehicle shipping Saudi Arabia.jpg',
+      '/images/car-towing/Door-to-door car delivery.jpg',
     ],
   },
   'luxury-car-transport': {
     hero: [
-      '/images/moving/insured-moving-company.jpg',
-      '/images/moving/professional-moving-team.jpg',
+      '/images/car-towing/Car relocation services.jpg',
+      '/images/car-towing/Auto transport company.jpg',
+      '/images/car-towing/Car transport services.jpg',
     ],
   },
 };
