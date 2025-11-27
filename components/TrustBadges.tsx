@@ -2,7 +2,7 @@ export function TrustBadges() {
   const badges = [
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -13,10 +13,12 @@ export function TrustBadges() {
       ),
       title: 'ضمان مكتوب',
       description: 'على جميع الخدمات',
+      color: 'from-green-500 to-emerald-600',
+      bgColor: 'bg-green-50',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -27,10 +29,12 @@ export function TrustBadges() {
       ),
       title: 'استجابة سريعة',
       description: 'نصلك في نفس اليوم',
+      color: 'from-blue-500 to-indigo-600',
+      bgColor: 'bg-blue-50',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -41,10 +45,12 @@ export function TrustBadges() {
       ),
       title: 'أسعار واضحة',
       description: 'بدون تكاليف خفية',
+      color: 'from-amber-500 to-orange-600',
+      bgColor: 'bg-amber-50',
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -55,22 +61,25 @@ export function TrustBadges() {
       ),
       title: 'فنيون معتمدون',
       description: 'مدربون ومؤمّنون',
+      color: 'from-purple-500 to-violet-600',
+      bgColor: 'bg-purple-50',
     },
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
       {badges.map((badge, index) => (
         <div
           key={index}
-          className="flex flex-col items-center text-center p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+          className={`flex flex-col items-center text-center p-4 sm:p-5 md:p-6 ${badge.bgColor} rounded-xl md:rounded-2xl hover:shadow-lg transition-all duration-300 border border-slate-100 group`}
         >
-          <div className="text-primary-600 mb-3">{badge.icon}</div>
-          <h4 className="font-bold text-gray-900 mb-1">{badge.title}</h4>
-          <p className="text-sm text-gray-600">{badge.description}</p>
+          <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br ${badge.color} text-white flex items-center justify-center mb-3 md:mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
+            {badge.icon}
+          </div>
+          <h4 className="font-bold text-slate-900 mb-0.5 md:mb-1 text-sm sm:text-base md:text-lg">{badge.title}</h4>
+          <p className="text-xs sm:text-sm text-slate-600">{badge.description}</p>
         </div>
       ))}
     </div>
   );
 }
-
