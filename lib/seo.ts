@@ -31,6 +31,14 @@ export function generateMetadata({
   const metadata: Metadata = {
     title: title || DEFAULT_TITLE_AR,
     description: description || DEFAULT_DESCRIPTION_AR,
+    icons: {
+      icon: [
+        { url: '/images/Logo.png', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/images/Logo.png', type: 'image/png' },
+      ],
+    },
     ...(canonical && {
       alternates: {
         canonical,
