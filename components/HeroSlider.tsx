@@ -9,36 +9,72 @@ interface Slide {
   subtitle: string;
 }
 
+// Updated slides with new images from all service categories
 const slides: Slide[] = [
   {
-    image: '/images/moving/furniture-moving-company.jpg',
+    image: '/images/moving/professional-moving-team.jpg',
     title: 'نقل عفش احترافي',
     subtitle: 'فريق متخصص • تغليف آمن • نقل سريع',
   },
   {
-    image: '/images/cleaning/home-cleaning-Riyadh.jpg',
+    image: '/images/cleaning/professional-cleaning-company.jpg',
     title: 'تنظيف منزلي شامل',
     subtitle: 'تنظيف عميق • معقمات آمنة • نتائج مضمونة',
   },
   {
-    image: '/images/ac/AC-maintenance.jpg',
+    image: '/images/ac/HVAC-services.jpg',
     title: 'صيانة مكيفات',
     subtitle: 'فنيون خبراء • قطع أصلية • ضمان معتمد',
   },
   {
-    image: '/images/leaks-plumbing/water-leak-detection-Riyadh.jpg',
+    image: '/images/leaks-plumbing/thermal-leak-inspection-Riyadh.jpg',
     title: 'كشف تسربات المياه',
     subtitle: 'أحدث الأجهزة • دقة عالية • حلول فورية',
   },
   {
-    image: '/images/pest-control/pest-control-Saudi-Arabia.jpg',
+    image: '/images/pest-control/professional-pest-exterminators.jpg',
     title: 'مكافحة حشرات',
     subtitle: 'مواد آمنة • فعالية طويلة • صحة عائلتك',
   },
   {
-    image: '/images/electricity/electrician-in-Saudi-Arabia.jpg',
+    image: '/images/electricity/electrical-maintenance-company.jpg',
     title: 'خدمات كهرباء',
     subtitle: 'كهربائيون معتمدون • أمان تام • خدمة 24/7',
+  },
+  {
+    image: '/images/flooring/Flooring Installation Saudi Arabia.jpg',
+    title: 'تركيب أرضيات',
+    subtitle: 'سيراميك • باركيه • رخام • فينيل',
+  },
+  {
+    image: '/images/painting-gypsum/Professional-painters-KSA.jpg',
+    title: 'دهانات وجبس',
+    subtitle: 'دهانات داخلية وخارجية • جبس بورد • ديكورات',
+  },
+  {
+    image: '/images/aluminum-glass/Aluminum Windows.jpg',
+    title: 'ألمنيوم وزجاج',
+    subtitle: 'نوافذ • أبواب • واجهات زجاجية',
+  },
+  {
+    image: '/images/landscaping/landscape design.jpg',
+    title: 'تنسيق حدائق',
+    subtitle: 'تصميم احترافي • نباتات متنوعة • أنظمة ري',
+  },
+  {
+    image: '/images/carpentry/Custom furniture.jpg',
+    title: 'نجارة وأثاث',
+    subtitle: 'تصنيع مطابخ • غرف نوم • أثاث مخصص',
+  },
+  {
+    image: '/images/insulation-roofs/Roof waterproofing Saudi Arabia.jpg',
+    title: 'عزل أسطح',
+    subtitle: 'عزل مائي • عزل حراري • حماية شاملة',
+  },
+  {
+    image: '/images/appliances/Home appliance repair.jpg',
+    title: 'صيانة أجهزة منزلية',
+    subtitle: 'غسالات • ثلاجات • أفران • مجففات',
   },
 ];
 
@@ -53,7 +89,7 @@ export function HeroSlider() {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
         setIsAnimating(false);
       }, 500);
-    }, 3000);
+    }, 4000); // Increased to 4 seconds for more slides
 
     return () => clearInterval(timer);
   }, []);
@@ -127,15 +163,15 @@ export function HeroSlider() {
         </div>
       </div>
 
-      {/* Dots Navigation */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+      {/* Dots Navigation - Scrollable for many slides */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1.5 z-10 max-w-[80%] overflow-x-auto pb-1">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`flex-shrink-0 w-2.5 h-2.5 rounded-full transition-all ${
               index === currentSlide
-                ? 'bg-white w-8'
+                ? 'bg-white w-6'
                 : 'bg-white/50 hover:bg-white/75'
             }`}
             aria-label={`الذهاب إلى الشريحة ${index + 1}`}
@@ -187,4 +223,3 @@ export function HeroSlider() {
     </div>
   );
 }
-
