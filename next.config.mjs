@@ -34,8 +34,37 @@ const nextConfig = {
       dynamic: 86400, // 1 day
     },
   },
-  // Redirects configuration - not used for 404s as they need special handling
-  // 404s are handled by not-found.tsx with client-side redirect
+  // Redirects for SEO - fix broken links and old URLs
+  async redirects() {
+    return [
+      // Service slug fixes
+      { source: '/services/electrical', destination: '/services/electricity', permanent: true },
+      { source: '/services/plumbing', destination: '/services/leaks-plumbing', permanent: true },
+      { source: '/services/appliance-repair', destination: '/services/appliances', permanent: true },
+      
+      // Subservice slug fixes
+      { source: '/services/moving/packing', destination: '/services/moving/furniture-packing', permanent: true },
+      { source: '/services/moving/disassembly', destination: '/services/moving/disassembly-assembly', permanent: true },
+      { source: '/services/cleaning/carpets', destination: '/services/cleaning/carpet-rug', permanent: true },
+      { source: '/services/cleaning/deep', destination: '/services/cleaning/deep-cleaning', permanent: true },
+      { source: '/services/cleaning/tanks', destination: '/services/cleaning/tank-cleaning', permanent: true },
+      { source: '/services/cleaning/steam', destination: '/services/cleaning/sanitization', permanent: true },
+      
+      // City slug fixes
+      { source: '/saudi/buraidah', destination: '/saudi/buraydah', permanent: true },
+      { source: '/saudi/buraidah/:path*', destination: '/saudi/buraydah/:path*', permanent: true },
+      
+      // Service name variations in city pages
+      { source: '/saudi/:city/ac-maintenance', destination: '/saudi/:city/ac', permanent: true },
+      { source: '/saudi/:city/electrician', destination: '/saudi/:city/electricity', permanent: true },
+      { source: '/saudi/:city/plumber', destination: '/saudi/:city/leaks-plumbing', permanent: true },
+      { source: '/saudi/:city/plumbing', destination: '/saudi/:city/leaks-plumbing', permanent: true },
+      
+      // Legacy URL patterns
+      { source: '/city/:city', destination: '/saudi/:city', permanent: true },
+      { source: '/service/:service', destination: '/services/:service', permanent: true },
+    ];
+  },
   
   // Headers for caching and AI optimization
   async headers() {

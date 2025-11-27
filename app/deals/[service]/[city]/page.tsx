@@ -107,13 +107,12 @@ export default function DealsPage({ params }: PageProps) {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              خصم حتى
-              <span className="block text-7xl md:text-8xl text-yellow-300 my-4">30%</span>
-              على {service.name_ar}
+              عروض {service.name_ar} في {city.name_ar}
+              <span className="block text-5xl md:text-7xl text-yellow-300 my-4">خصم 30%</span>
             </h1>
 
             <p className="text-2xl text-red-100 mb-8 leading-relaxed">
-              في {city.name_ar} • عرض محدود • احجز الآن
+              عرض محدود • فنيون معتمدون • ضمان مكتوب • احجز الآن
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

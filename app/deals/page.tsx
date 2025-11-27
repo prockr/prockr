@@ -317,7 +317,7 @@ export default function DealsHubPage() {
                     </span>
                   </div>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    خصومات على <Link href="/services/ac" className="text-primary-600 font-semibold hover:underline">صيانة المكيفات</Link>، <Link href="/services/leaks-plumbing" className="text-primary-600 font-semibold hover:underline">كشف تسربات المياه</Link>، <Link href="/services/plumbing" className="text-primary-600 font-semibold hover:underline">السباكة</Link>، و<Link href="/services/electrical" className="text-primary-600 font-semibold hover:underline">الكهرباء</Link>. معاينة مجانية مع كل عرض!
+                    خصومات على <Link href="/services/ac" className="text-primary-600 font-semibold hover:underline">صيانة المكيفات</Link>، <Link href="/services/leaks-plumbing" className="text-primary-600 font-semibold hover:underline">كشف تسربات المياه</Link>، <Link href="/services/leaks-plumbing" className="text-primary-600 font-semibold hover:underline">السباكة</Link>، و<Link href="/services/electricity" className="text-primary-600 font-semibold hover:underline">الكهرباء</Link>. معاينة مجانية مع كل عرض!
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-200">

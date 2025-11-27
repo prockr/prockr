@@ -360,7 +360,7 @@ export default function ServiceAreaPage() {
                     حتى الفنيون ذوو الخبرة الواسعة يخضعون لبرنامج تدريبي شامل قبل البدء بالعمل مع عملائنا. نعلمهم معاييرنا في الجودة، أفضل الممارسات في خدمة العملاء، واستخدام نظامنا الإلكتروني. التدريب ليس مجرد إجراء شكلي - إنه استثمار في جودة الخدمة.
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    نوفر تدريباً مستمراً على أحدث التقنيات والمعدات، خاصة في <Link href="/services/leaks-plumbing" className="text-blue-600 font-semibold hover:underline">كشف التسربات</Link>، <Link href="/services/electrical" className="text-blue-600 font-semibold hover:underline">الكهرباء</Link>، و<Link href="/services/ac" className="text-blue-600 font-semibold hover:underline">التكييف</Link>. هذا يضمن أن شركاءنا دائماً في طليعة مجالهم.
+                    نوفر تدريباً مستمراً على أحدث التقنيات والمعدات، خاصة في <Link href="/services/leaks-plumbing" className="text-blue-600 font-semibold hover:underline">كشف التسربات</Link>، <Link href="/services/electricity" className="text-blue-600 font-semibold hover:underline">الكهرباء</Link>، و<Link href="/services/ac" className="text-blue-600 font-semibold hover:underline">التكييف</Link>. هذا يضمن أن شركاءنا دائماً في طليعة مجالهم.
                   </p>
                 </div>
               </div>

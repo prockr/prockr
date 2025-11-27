@@ -387,7 +387,7 @@ export default function EmergencyHubPage() {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">فنيون متخصصون في الطوارئ</h3>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      ليس كل فني يستطيع التعامل مع الطوارئ. فريقنا مدرب خصيصاً على التشخيص السريع واتخاذ قرارات فورية تحت الضغط. لديهم خبرة واسعة في <Link href="/services/leaks-plumbing" className="text-green-600 font-semibold hover:underline">إصلاح التسربات</Link>، <Link href="/services/electrical" className="text-green-600 font-semibold hover:underline">الأعطال الكهربائية</Link>، و<Link href="/services/ac" className="text-green-600 font-semibold hover:underline">أعطال التكييف</Link> الحرجة.
+                      ليس كل فني يستطيع التعامل مع الطوارئ. فريقنا مدرب خصيصاً على التشخيص السريع واتخاذ قرارات فورية تحت الضغط. لديهم خبرة واسعة في <Link href="/services/leaks-plumbing" className="text-green-600 font-semibold hover:underline">إصلاح التسربات</Link>، <Link href="/services/electricity" className="text-green-600 font-semibold hover:underline">الأعطال الكهربائية</Link>، و<Link href="/services/ac" className="text-green-600 font-semibold hover:underline">أعطال التكييف</Link> الحرجة.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                       كل فني لديه ترخيص معتمد وتأمين ضد الحوادث، لراحة بالك الكاملة.
@@ -451,7 +451,7 @@ export default function EmergencyHubPage() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">تقييم فوري للحالة</h3>
                   <p className="text-gray-700 leading-relaxed text-lg mb-4">
-                    بناءً على وصفك، نقيّم مدى خطورة الحالة ونحدد أولوية الاستجابة. للحالات الحرجة جداً (مثل <Link href="/services/leaks-plumbing" className="text-orange-600 font-semibold hover:underline">انفجار ماسورة</Link> أو <Link href="/services/electrical" className="text-orange-600 font-semibold hover:underline">ماس كهربائي</Link>)، نوجه أقرب فريق متاح فوراً - خلال دقائق من مكالمتك.
+                    بناءً على وصفك، نقيّم مدى خطورة الحالة ونحدد أولوية الاستجابة. للحالات الحرجة جداً (مثل <Link href="/services/leaks-plumbing" className="text-orange-600 font-semibold hover:underline">انفجار ماسورة</Link> أو <Link href="/services/electricity" className="text-orange-600 font-semibold hover:underline">ماس كهربائي</Link>)، نوجه أقرب فريق متاح فوراً - خلال دقائق من مكالمتك.
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg">
                     للحالات الأقل حرجة قليلاً، نحدد موعد وصول دقيق (عادة خلال ساعة أو ساعتين) ونرسل لك تأكيد عبر رسالة نصية.
@@ -582,7 +582,7 @@ export default function EmergencyHubPage() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link href="/services/electrical" className="text-yellow-600 font-bold hover:underline">
+                  <Link href="/services/electricity" className="text-yellow-600 font-bold hover:underline">
                     المزيد عن خدمات الكهرباء →
                   </Link>
                 </div>

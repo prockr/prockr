@@ -170,7 +170,7 @@ export default function FAQPage({ params }: PageProps) {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="text-primary-600 font-bold text-lg mt-1">✓</span>
-                    <span className="leading-relaxed">احجز مبكراً خاصة في <Link href="/saudi/{city.slug}" className="text-primary-600 font-semibold hover:underline">{city.name_ar}</Link> لضمان توفر الموعد</span>
+                    <span className="leading-relaxed">احجز مبكراً خاصة في <Link href={`/saudi/${city.slug}`} className="text-primary-600 font-semibold hover:underline">{city.name_ar}</Link> لضمان توفر الموعد</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary-600 font-bold text-lg mt-1">✓</span>

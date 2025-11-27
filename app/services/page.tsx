@@ -408,11 +408,11 @@ export default function ServicesPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold">•</span>
-                    <Link href="/services/plumbing" className="hover:text-primary-600 hover:underline">السباكة والصرف</Link>
+                    <Link href="/services/leaks-plumbing" className="hover:text-primary-600 hover:underline">السباكة والصرف</Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold">•</span>
-                    <Link href="/services/electrical" className="hover:text-primary-600 hover:underline">الكهرباء</Link>
+                    <Link href="/services/electricity" className="hover:text-primary-600 hover:underline">الكهرباء</Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 font-bold">•</span>
