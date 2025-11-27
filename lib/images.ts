@@ -2,9 +2,13 @@
  * Image mapping for all services and subservices
  * Maps service/subservice slugs to their corresponding images
  * 
- * Total Images: ~289 across all categories
- * Last Updated: Nov 2025
+ * Total Images: ~313 across all categories
+ * Last Updated: Nov 27, 2025 - All images refreshed
+ * Cache Version: v2
  */
+
+// Cache buster version - increment to force image refresh
+export const IMAGE_CACHE_VERSION = 'v2';
 
 export interface ServiceImages {
   hero: string[]; // Hero/main images
@@ -1109,20 +1113,20 @@ export const SERVICE_IMAGES: Record<string, ServiceImages> = {
 // ====================================
 
 /**
- * Get images for a specific service in a specific city
+ * Get images for a specific service in a specific city with cache busting
  */
 export function getCityServiceImages(serviceSlug: string, citySlug: string): string[] {
   // Check for city-specific images first
   const cityKey = `${serviceSlug}-${citySlug}`;
   if (SERVICE_IMAGES[cityKey]) {
-    return SERVICE_IMAGES[cityKey].hero;
+    return SERVICE_IMAGES[cityKey].hero.map(addCacheBuster);
   }
   
   // Check for leak detection city-specific
   if (serviceSlug === 'leaks-plumbing') {
     const leakCityKey = `leak-${citySlug}`;
     if (SERVICE_IMAGES[leakCityKey]) {
-      return SERVICE_IMAGES[leakCityKey].hero;
+      return SERVICE_IMAGES[leakCityKey].hero.map(addCacheBuster);
     }
   }
   
@@ -1130,76 +1134,89 @@ export function getCityServiceImages(serviceSlug: string, citySlug: string): str
   if (serviceSlug === 'pest-control') {
     const pestCityKey = `pest-${citySlug}`;
     if (SERVICE_IMAGES[pestCityKey]) {
-      return SERVICE_IMAGES[pestCityKey].hero;
+      return SERVICE_IMAGES[pestCityKey].hero.map(addCacheBuster);
     }
   }
   
   // Fallback to general service images
-  return SERVICE_IMAGES[serviceSlug]?.hero || [];
+  const images = SERVICE_IMAGES[serviceSlug]?.hero || [];
+  return images.map(addCacheBuster);
 }
 
 /**
- * Get hero image for a service or subservice
+ * Get hero image for a service or subservice with cache busting
  */
 export function getHeroImage(slug: string, index: number = 0): string {
   const images = SERVICE_IMAGES[slug];
   if (images?.hero && images.hero[index]) {
-    return images.hero[index];
+    return addCacheBuster(images.hero[index]);
   }
   // Fallback to first hero image or default
-  return images?.hero?.[0] || '/images/Logo.png';
+  return addCacheBuster(images?.hero?.[0] || '/images/Logo.png');
 }
 
 /**
- * Get all hero images for a service
+ * Add cache buster to image URL for fresh loading
+ */
+function addCacheBuster(imagePath: string): string {
+  // Only add cache buster in production or when needed
+  // Using version instead of timestamp for consistent caching
+  return `${imagePath}?v=${IMAGE_CACHE_VERSION}`;
+}
+
+/**
+ * Get all hero images for a service with cache busting
  */
 export function getAllHeroImages(slug: string): string[] {
-  return SERVICE_IMAGES[slug]?.hero || [];
+  const images = SERVICE_IMAGES[slug]?.hero || [];
+  return images.map(addCacheBuster);
 }
 
 /**
- * Get gallery images for a service
+ * Get gallery images for a service with cache busting
  */
 export function getGalleryImages(slug: string): string[] {
-  return SERVICE_IMAGES[slug]?.gallery || SERVICE_IMAGES[slug]?.hero || [];
+  const images = SERVICE_IMAGES[slug]?.gallery || SERVICE_IMAGES[slug]?.hero || [];
+  return images.map(addCacheBuster);
 }
 
 /**
- * Get all images (hero + gallery) for a service
+ * Get all images (hero + gallery) for a service with cache busting
  */
 export function getAllServiceImages(slug: string): string[] {
   const serviceImages = SERVICE_IMAGES[slug];
   if (!serviceImages) return [];
   
-  return [
+  const allImages = [
     ...(serviceImages.hero || []),
     ...(serviceImages.gallery || []),
   ];
+  return allImages.map(addCacheBuster);
 }
 
 /**
- * Get random hero image for a service
+ * Get random hero image for a service with cache busting
  */
 export function getRandomHeroImage(slug: string): string {
   const images = SERVICE_IMAGES[slug]?.hero;
   if (!images || images.length === 0) {
-    return '/images/Logo.png';
+    return addCacheBuster('/images/Logo.png');
   }
   const randomIndex = Math.floor(Math.random() * images.length);
-  return images[randomIndex];
+  return addCacheBuster(images[randomIndex]);
 }
 
 /**
- * Get multiple random images for a service
+ * Get multiple random images for a service with cache busting
  */
 export function getRandomImages(slug: string, count: number): string[] {
   const allImages = getAllServiceImages(slug);
   
   if (allImages.length === 0) {
-    return ['/images/Logo.png'];
+    return [addCacheBuster('/images/Logo.png')];
   }
   
-  // Shuffle and take first 'count' images
+  // Shuffle and take first 'count' images (already has cache buster from getAllServiceImages)
   const shuffled = [...allImages].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }
@@ -1213,18 +1230,18 @@ export function hasImages(slug: string): boolean {
 }
 
 /**
- * Get image for service card (first hero image)
+ * Get image for service card (first hero image) with cache busting
  */
 export function getServiceCardImage(serviceSlug: string): string {
   return getHeroImage(serviceSlug, 0);
 }
 
 /**
- * Get images for slider/carousel
+ * Get images for slider/carousel with cache busting
  */
 export function getSliderImages(slug: string, maxCount: number = 4): string[] {
   const heroImages = SERVICE_IMAGES[slug]?.hero || [];
-  return heroImages.slice(0, maxCount);
+  return heroImages.slice(0, maxCount).map(addCacheBuster);
 }
 
 /**
