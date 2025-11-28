@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { City } from '@/data/cities';
 import type { ServiceCategory } from '@/data/services';
-import { SITE_NAME_AR, DEFAULT_TITLE_AR, DEFAULT_DESCRIPTION_AR } from './constants';
+import { SITE_NAME_AR, DEFAULT_TITLE_AR, DEFAULT_DESCRIPTION_AR, SITE_URL } from './constants';
 import { absoluteUrl } from './urls';
 
 export function titleServiceCity(service: ServiceCategory, city: City): string {
@@ -31,6 +31,26 @@ export function generateMetadata({
   const metadata: Metadata = {
     title: title || DEFAULT_TITLE_AR,
     description: description || DEFAULT_DESCRIPTION_AR,
+    
+    // Search Engine Verification Tags
+    // Add your verification codes here after registering with each service
+    verification: {
+      google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Get from Google Search Console
+      yandex: 'YOUR_YANDEX_VERIFICATION_CODE', // Get from Yandex Webmaster
+      // bing: 'YOUR_BING_VERIFICATION_CODE', // Get from Bing Webmaster Tools
+    },
+    
+    // Additional meta tags for better indexing
+    other: {
+      'geo.region': 'SA',
+      'geo.placename': 'Saudi Arabia',
+      'content-language': 'ar',
+      'revisit-after': '1 days',
+      'rating': 'general',
+      'distribution': 'global',
+      'robots': 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    },
+    
     icons: {
       icon: [
         { url: '/images/Logo.png', type: 'image/png' },
@@ -39,6 +59,10 @@ export function generateMetadata({
         { url: '/images/Logo.png', type: 'image/png' },
       ],
     },
+    
+    // Manifest for PWA
+    manifest: '/manifest.webmanifest',
+    
     ...(canonical && {
       alternates: {
         canonical,
@@ -48,6 +72,7 @@ export function generateMetadata({
         },
       },
     }),
+    
     openGraph: {
       title: title || DEFAULT_TITLE_AR,
       description: description || DEFAULT_DESCRIPTION_AR,
@@ -64,12 +89,39 @@ export function generateMetadata({
         },
       ],
     },
+    
     twitter: {
       card: 'summary_large_image',
       title: title || DEFAULT_TITLE_AR,
       description: description || DEFAULT_DESCRIPTION_AR,
       images: [ogImage],
+      // site: '@prokr_sa', // Add Twitter handle when available
+      // creator: '@prokr_sa',
     },
+    
+    // Keywords for better indexing (though less important now)
+    keywords: [
+      'خدمات منزلية',
+      'صيانة منزلية',
+      'نقل عفش',
+      'تنظيف',
+      'سباكة',
+      'كهرباء',
+      'تكييف',
+      'السعودية',
+      'الرياض',
+      'جدة',
+      'مكة',
+      'home services',
+      'saudi arabia',
+    ],
+    
+    // App metadata
+    applicationName: SITE_NAME_AR,
+    category: 'Home Services',
+    
+    // Base URL
+    metadataBase: new URL(SITE_URL),
   };
 
   if (noindex) {
@@ -77,6 +129,15 @@ export function generateMetadata({
       index: false,
       follow: true,
       nocache: false,
+    };
+  } else {
+    // Default robots for indexed pages
+    metadata.robots = {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     };
   }
 

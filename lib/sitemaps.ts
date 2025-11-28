@@ -1,5 +1,6 @@
 import { CITIES, getTier1And2Cities } from '@/data/cities';
 import { SERVICES } from '@/data/services';
+import { getAllPosts, BLOG_CATEGORIES } from '@/data/blog';
 import { absoluteUrl, cityPath, servicePath, pricingPath, faqPath } from './urls';
 import { SITEMAP_MAX_URLS } from './constants';
 
@@ -8,16 +9,21 @@ export type SitemapUrl = {
   lastModified: Date;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
+  images?: { url: string; title?: string; caption?: string }[];
 };
 
 /**
- * Generate all URLs for sitemaps
+ * Generate all URLs for sitemaps - Complete site coverage for Google Search Console
  */
 export function generateAllUrls(): SitemapUrl[] {
   const urls: SitemapUrl[] = [];
   const now = new Date();
 
-  // Homepage
+  // ==========================================
+  // 1. HIGH PRIORITY PAGES (Priority 1.0 - 0.9)
+  // ==========================================
+  
+  // Homepage - Most important
   urls.push({
     url: absoluteUrl('/'),
     lastModified: now,
@@ -25,7 +31,7 @@ export function generateAllUrls(): SitemapUrl[] {
     priority: 1.0,
   });
 
-  // Saudi hub
+  // Saudi hub - Main regional page
   urls.push({
     url: absoluteUrl('/saudi'),
     lastModified: now,
@@ -33,46 +39,98 @@ export function generateAllUrls(): SitemapUrl[] {
     priority: 0.9,
   });
 
-  // Static pages
+  // Services hub
+  urls.push({
+    url: absoluteUrl('/services'),
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.9,
+  });
+
+  // ==========================================
+  // 2. MAIN NAVIGATION PAGES (Priority 0.8)
+  // ==========================================
+  const mainPages = [
+    { path: '/about', freq: 'monthly' as const },
+    { path: '/contact', freq: 'monthly' as const },
+    { path: '/pricing', freq: 'weekly' as const },
+    { path: '/faqs', freq: 'weekly' as const },
+    { path: '/deals', freq: 'daily' as const },
+    { path: '/emergency', freq: 'daily' as const },
+    { path: '/providers', freq: 'weekly' as const },
+    { path: '/coverage', freq: 'weekly' as const },
+    { path: '/service-area', freq: 'weekly' as const },
+    { path: '/blog', freq: 'daily' as const },
+  ];
+
+  mainPages.forEach((page) => {
+    urls.push({
+      url: absoluteUrl(page.path),
+      lastModified: now,
+      changeFrequency: page.freq,
+      priority: 0.8,
+    });
+  });
+
+  // Legal pages (lower priority)
   urls.push(
     {
-      url: absoluteUrl('/services'),
+      url: absoluteUrl('/privacy'),
       lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
     {
-      url: absoluteUrl('/providers'),
+      url: absoluteUrl('/terms'),
       lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: absoluteUrl('/coverage'),
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     }
   );
 
-  // City hubs (Tier 1 & 2)
+  // ==========================================
+  // 3. SERVICE PAGES (Priority 0.85)
+  // ==========================================
+  SERVICES.forEach((service) => {
+    // Main service page
+    urls.push({
+      url: absoluteUrl(`/services/${service.slug}`),
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    });
+
+    // Subservice pages
+    service.subservices?.forEach((subservice) => {
+      urls.push({
+        url: absoluteUrl(`/services/${service.slug}/${subservice.slug}`),
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    });
+  });
+
+  // ==========================================
+  // 4. CITY HUB PAGES (Priority 0.85 - 0.75)
+  // ==========================================
   const tier1And2 = getTier1And2Cities();
   tier1And2.forEach((city) => {
     urls.push({
       url: absoluteUrl(cityPath(city.slug)),
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: city.tier === 1 ? 0.9 : 0.8,
+      priority: city.tier === 1 ? 0.85 : 0.75,
     });
   });
 
-  // Service × City pages (money pages)
-  // For Tier 1: all services
-  // For Tier 2: top services only
+  // ==========================================
+  // 5. CITY × SERVICE PAGES (Money Pages - Priority 0.9 - 0.7)
+  // ==========================================
   CITIES.forEach((city) => {
     const services = city.tier === 1 ? SERVICES : SERVICES.slice(0, 8);
     services.forEach((service) => {
-      // Main service page
+      // Main service page for city
       urls.push({
         url: absoluteUrl(servicePath(city.slug, service.slug)),
         lastModified: now,
@@ -95,6 +153,61 @@ export function generateAllUrls(): SitemapUrl[] {
         changeFrequency: 'weekly',
         priority: city.tier === 1 ? 0.8 : 0.6,
       });
+
+      // Deals page
+      urls.push({
+        url: absoluteUrl(`/deals/${service.slug}/${city.slug}`),
+        lastModified: now,
+        changeFrequency: 'daily',
+        priority: city.tier === 1 ? 0.75 : 0.55,
+      });
+
+      // Emergency page (for relevant services)
+      const emergencyServices = ['moving', 'leaks-plumbing', 'pest-control', 'electricity', 'ac'];
+      if (emergencyServices.includes(service.slug)) {
+        urls.push({
+          url: absoluteUrl(`/emergency/${service.slug}/${city.slug}`),
+          lastModified: now,
+          changeFrequency: 'daily',
+          priority: city.tier === 1 ? 0.8 : 0.6,
+        });
+      }
+
+      // Subservice pages for tier 1 cities
+      if (city.tier === 1) {
+        service.subservices?.forEach((subservice) => {
+          urls.push({
+            url: absoluteUrl(`/saudi/${city.slug}/${service.slug}/${subservice.slug}`),
+            lastModified: now,
+            changeFrequency: 'weekly',
+            priority: 0.75,
+          });
+        });
+      }
+    });
+  });
+
+  // ==========================================
+  // 6. BLOG PAGES (Priority 0.7 - 0.6)
+  // ==========================================
+  const blogPosts = getAllPosts();
+  blogPosts.forEach((post) => {
+    urls.push({
+      url: absoluteUrl(`/blog/${post.slug}`),
+      lastModified: new Date(post.updatedAt || post.publishedAt),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      images: post.image ? [{ url: absoluteUrl(post.image), title: post.title }] : undefined,
+    });
+  });
+
+  // Blog category pages
+  BLOG_CATEGORIES.forEach((category) => {
+    urls.push({
+      url: absoluteUrl(`/blog/category/${category.slug}`),
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     });
   });
 
