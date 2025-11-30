@@ -49,7 +49,17 @@ export async function GET() {
     }
   });
 
-  // Generate XML
+  // Generate XML with at least one URL
+  if (images.length === 0) {
+    // Fallback to homepage if no images
+    images.push({
+      pageUrl: absoluteUrl('/'),
+      imageUrl: absoluteUrl('/images/Logo.png'),
+      title: 'بروكر - منصة الخدمات المنزلية',
+      caption: 'منصة بروكر للخدمات المنزلية في السعودية',
+    });
+  }
+
   const urlsXml = images
     .map((img) => `  <url>
     <loc>${escapeXml(img.pageUrl)}</loc>

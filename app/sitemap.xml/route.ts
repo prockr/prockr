@@ -2,38 +2,17 @@ import { absoluteUrl } from '@/lib/urls';
 
 /**
  * Main Sitemap Index for Google Search Console
- * Complete site coverage with organized shards
+ * Simplified structure with guaranteed content
  */
 export async function GET() {
   const lastmod = new Date().toISOString();
   
-  // Define all sitemap shards - organized by content type
+  // Simplified sitemap structure - 4 main shards
   const sitemaps = [
-    // Core pages
-    'static',           // Homepage, main nav, legal pages
-    'services',         // Service hub pages (/services/*)
-    
-    // City pages
-    'cities-1',         // City hub pages (/saudi/*)
-    'cities-services',  // City × Service pages (/saudi/*/*)
-    
-    // Money pages (high-value SEO)
-    'pricing-1',        // Pricing pages part 1
-    'pricing-2',        // Pricing pages part 2
-    'faq-1',            // FAQ pages part 1
-    'faq-2',            // FAQ pages part 2
-    'deals',            // Deals pages
-    'emergency',        // Emergency pages
-    
-    // Subservices
-    'subservices-1',    // Subservice pages part 1
-    'subservices-2',    // Subservice pages part 2
-    
-    // Blog
-    'blog',             // Blog posts and categories
-    
-    // Images (for Google Image Search)
-    'images',           // All site images
+    'pages',      // All main pages (static, services, cities)
+    'dynamic',    // All dynamic pages (pricing, faq, deals, emergency)
+    'blog',       // Blog posts and categories
+    'images',     // Image sitemap
   ];
   
   const sitemapEntries = sitemaps

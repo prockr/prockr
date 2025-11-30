@@ -265,12 +265,21 @@ export function getShardNames(urls: SitemapUrl[]): string[] {
 
 /**
  * Generate sitemap XML with image support
+ * Always includes at least one URL to prevent empty sitemap errors
  */
 export function generateSitemapXml(urls: SitemapUrl[]): string {
-  const urlsXml = urls
+  // Ensure we have at least one URL
+  const safeUrls = urls.length > 0 ? urls : [{
+    url: absoluteUrl('/'),
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
+    priority: 1.0,
+  }];
+
+  const urlsXml = safeUrls
     .map((item) => {
       let urlXml = `  <url>
-    <loc>${item.url}</loc>
+    <loc>${escapeXml(item.url)}</loc>
     <lastmod>${item.lastModified.toISOString()}</lastmod>
     <changefreq>${item.changeFrequency}</changefreq>
     <priority>${item.priority}</priority>`;
@@ -280,7 +289,7 @@ export function generateSitemapXml(urls: SitemapUrl[]): string {
         item.images.forEach((img) => {
           urlXml += `
     <image:image>
-      <image:loc>${img.url}</image:loc>${img.title ? `
+      <image:loc>${escapeXml(img.url)}</image:loc>${img.title ? `
       <image:title>${escapeXml(img.title)}</image:title>` : ''}${img.caption ? `
       <image:caption>${escapeXml(img.caption)}</image:caption>` : ''}
     </image:image>`;
