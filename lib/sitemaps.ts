@@ -3,6 +3,7 @@ import { SERVICES } from '@/data/services';
 import { getAllPosts, BLOG_CATEGORIES } from '@/data/blog';
 import { absoluteUrl, cityPath, servicePath, pricingPath, faqPath } from './urls';
 import { SITEMAP_MAX_URLS } from './constants';
+import { getServiceCardImage, getHeroImage } from './images';
 
 export type SitemapUrl = {
   url: string;
@@ -92,21 +93,33 @@ export function generateAllUrls(): SitemapUrl[] {
   // 3. SERVICE PAGES (Priority 0.85)
   // ==========================================
   SERVICES.forEach((service) => {
-    // Main service page
+    // Main service page with image
+    const serviceImage = getServiceCardImage(service.slug);
     urls.push({
       url: absoluteUrl(`/services/${service.slug}`),
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.85,
+      images: serviceImage ? [{
+        url: absoluteUrl(serviceImage.replace('?v=v2', '')),
+        title: `${service.name_ar} - بروكر`,
+        caption: `خدمة ${service.name_ar} في السعودية`
+      }] : undefined,
     });
 
-    // Subservice pages
+    // Subservice pages with images
     service.subservices?.forEach((subservice) => {
+      const subserviceImage = getHeroImage(`${service.slug}/${subservice.slug}`);
       urls.push({
         url: absoluteUrl(`/services/${service.slug}/${subservice.slug}`),
         lastModified: now,
         changeFrequency: 'weekly',
         priority: 0.8,
+        images: subserviceImage ? [{
+          url: absoluteUrl(subserviceImage.replace('?v=v2', '')),
+          title: `${subservice.name_ar} - بروكر`,
+          caption: `خدمة ${subservice.name_ar} في السعودية`
+        }] : undefined,
       });
     });
   });
@@ -251,24 +264,52 @@ export function getShardNames(urls: SitemapUrl[]): string[] {
 }
 
 /**
- * Generate sitemap XML
+ * Generate sitemap XML with image support
  */
 export function generateSitemapXml(urls: SitemapUrl[]): string {
   const urlsXml = urls
-    .map(
-      (item) => `  <url>
+    .map((item) => {
+      let urlXml = `  <url>
     <loc>${item.url}</loc>
     <lastmod>${item.lastModified.toISOString()}</lastmod>
     <changefreq>${item.changeFrequency}</changefreq>
-    <priority>${item.priority}</priority>
-  </url>`
-    )
+    <priority>${item.priority}</priority>`;
+      
+      // Add images if present
+      if (item.images && item.images.length > 0) {
+        item.images.forEach((img) => {
+          urlXml += `
+    <image:image>
+      <image:loc>${img.url}</image:loc>${img.title ? `
+      <image:title>${escapeXml(img.title)}</image:title>` : ''}${img.caption ? `
+      <image:caption>${escapeXml(img.caption)}</image:caption>` : ''}
+    </image:image>`;
+        });
+      }
+      
+      urlXml += `
+  </url>`;
+      return urlXml;
+    })
     .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urlsXml}
 </urlset>`;
+}
+
+/**
+ * Escape XML special characters
+ */
+function escapeXml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
 }
 
 /**
