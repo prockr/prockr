@@ -176,7 +176,7 @@ export function generateAllUrls(): SitemapUrl[] {
       });
 
       // Emergency page (for relevant services)
-      const emergencyServices = ['moving', 'leaks-plumbing', 'pest-control', 'electricity', 'ac'];
+      const emergencyServices = ['moving', 'leaks-plumbing', 'pest-control', 'ac'];
       if (emergencyServices.includes(service.slug)) {
         urls.push({
           url: absoluteUrl(`/emergency/${service.slug}/${city.slug}`),

@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   const params: { service: string; city: string }[] = [];
 
   // Generate for Tier 1 cities and emergency services only
-  const emergencyServices = ['moving', 'leaks-plumbing', 'pest-control', 'ac', 'electricity'];
+  const emergencyServices = ['moving', 'leaks-plumbing', 'pest-control', 'ac'];
   
   CITIES.filter((c) => c.tier === 1).forEach((city) => {
     SERVICES.filter((s) => emergencyServices.includes(s.slug)).forEach((service) => {
