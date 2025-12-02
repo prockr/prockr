@@ -19,7 +19,7 @@ export const metadata = genMetadata({
 export default function EmergencyHubPage() {
   const tier1Cities = getTier1Cities();
   const emergencyServices = SERVICES.filter((s) =>
-    ['moving', 'leaks-plumbing', 'pest-control', 'ac', 'electricity'].includes(s.slug)
+    ['moving', 'leaks-plumbing', 'pest-control', 'ac'].includes(s.slug)
   );
 
   return (
