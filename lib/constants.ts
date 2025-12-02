@@ -1,8 +1,8 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://prokr.com';
 export const SITE_NAME = 'Prokr';
 export const SITE_NAME_AR = 'بروكر';
-export const PHONE = process.env.NEXT_PUBLIC_PHONE || '966548923300';
-export const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '966548923300';
+export const PHONE = process.env.NEXT_PUBLIC_PHONE || '966543654700';
+export const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '966543654700';
 
 export const DEFAULT_LOCALE = 'ar';
 export const LOCALES = ['ar'] as const;

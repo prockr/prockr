@@ -242,13 +242,13 @@ export default function CityHubPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+966548923300"
+              href="tel:+966543654700"
               className="px-10 py-5 bg-white text-primary-600 rounded-xl hover:bg-gray-100 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
             >
               📞 اتصل الآن
             </a>
             <a
-              href="https://wa.me/966548923300"
+              href="https://wa.me/966543654700"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all font-bold text-xl shadow-2xl transform hover:scale-105"
